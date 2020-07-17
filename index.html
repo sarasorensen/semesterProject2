@@ -8,6 +8,7 @@
       content="Game of Banners is a free online board game, enjoy with friends and family today!"
     />
     <link rel="stylesheet" href="styles/stylesheet.css" />
+    <link rel="stylesheet" href="styles/media.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -23,61 +24,85 @@
 
   <body>
     <header>
-      <a class="logo-header-a" href="index.html"
-        ><img
-          class="logo-header"
-          src="images/main-logo@200x-8.png"
-          alt="company logo Game Of Banners"
-      /></a>
-    </header>
-
-     <div class="wrapper">
-         
-      <div class="char-container">
-        <article>
-            <img class="horizontal_logo"
-          src="images/horizontal_logo.png"
-          alt="company logo Game Of Banners"
-      />
-          <h1>Compete against your friends, and be the last one standing</h1>
-         
-          <div class="list-box">
-            <ol class="list">
+      <div class="wrapper">
+        <div class="char-container">
+          <article>
+            <img
+              class="horizontal_logo"
+              src="images/white-horizontal-logo.png"
+              alt="company logo Game Of Banners"
+            />
+            <h1>Compete against your friends, and be the last one standing!</h1>
+  
+            <div class="list-box">
+              <ol class="list">
                 <li>Choose 2 characters by clicking on their card.</li>
-                <li>Once selected, the game will automatically begin. </li>
-                <li>Good luck & Watch out for the traps! </li>
+                <li>Once selected, the game will automatically begin.</li>
+                <li>Good luck & Watch out for the traps!</li>
               </ol>
             </div>
-        </article>
-           <button  type="button" id="button"><span>Play now!</span></button>
-      
+          </article>
+          <button type="button" id="button">Play now</button>
+        </div>
       </div>
+    </header>
 
+   
 
     <div class="char-row" id="card-row">
       <div class="char-column" id="cards">
         <div class="card"></div>
       </div>
     </div>
-</div>
-</div>
+
+    <div class="players-box" id="players-box">
+      <div class="hidden-content" id="hidden-content">
+        <div class="row">
+          <div class="player-box">
+            <h3 class="playerId" id="player1">Player 1</h3>
+            <img
+              alt=""
+              class="player-img"
+              src="images/characters/char-ari.png"
+            />
+          </div>
+
+          <div class="player-box">
+            <p class="versus">vs</p>
+          </div>
+
+          <div class="player-box">
+            <h3 class="playerId" id="player2">Player 2</h3>
+            <img
+              alt=""
+              class="player-img"
+              src="images/characters/char-ari.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <footer>
-      <div class="footer-row">
+
         <div class="footer-column">
           <a href="index.html">
             <img
               class="logo-footer"
-              src="images/small-logo-white@200x-8.png"
+              src="images/small-logo@200x-8.png"
               alt="Game Of Banners Logo"
           /></a>
         </div>
 
-      <div class="footer-copyright">
-        <p class="copyright">
-          © 2020 Game of Banners. Web design by Sara Sørensen
-        </p>
+        <div class="footer-column">
+          <p class="copyright">
+            © 2020 Game of Banners. Web design by Sara Sørensen.
+          </p>
+        </div>
       </div>
     </footer>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
