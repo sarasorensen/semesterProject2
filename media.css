@@ -1,0 +1,99 @@
+/*Media queries -------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 375px) {
+  .horizontal_logo {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .hidden-content {
+    font-size: 0.5em;
+    margin-top: 50%;
+  }
+
+  .logo-footer {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 480px) {
+  .horizontal_logo {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .hidden-content {
+    font-size: 0.5em;
+    margin-top: 50%;
+  }
+
+  .logo-footer {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 595px) {
+  .horizontal_logo {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .hidden-content {
+    font-size: 0.8em;
+    margin-top: 40%;
+  }
+  .logo-footer {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 595px) and (max-width: 690px) {
+  .horizontal_logo {
+    width: 90%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 45%;
+  }
+  .hidden-content {
+    font-size: 0.8em;
+    margin-top: 35%;
+  }
+  .logo-footer {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 690px) and (max-width: 800px) {
+  .horizontal_logo {
+    width: 80%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 45%;
+  }
+  .hidden-content {
+    font-size: 1em;
+    margin-top: 20%;
+  }
+  .logo-footer {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 40%;
+  }
+  .hidden-content {
+    margin-top: 15%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+  .hidden-content {
+    margin-top: 10%;
+  }
+}

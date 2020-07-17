@@ -1,12 +1,19 @@
-/*E3dfd2 background color
-E6E8EA char picture*/
+/*e3dfd2 body bckg
+#f4f7f6 background color card
+blue #013a6b
+teal #6DCAB5 hover: #46a891
+orange #F4976C 
+*/
 
 body {
+  width: 100%;
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: #000000;
   background-color: #e3dfd2;
-  width: 100%;
-  height: 100%;
+  background-image: -webkit-linear-gradient(200deg, #e3dfd2 60%, #46a89194 40%);
+  background-repeat: no-repeat;
+  background-size: cover;
   line-height: 1.5;
   margin: 0;
 }
@@ -19,13 +26,46 @@ p {
   line-height: 20pt;
 }
 h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 2em;
+  margin-top: 0;
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+}
+button {
+  background-color: #46a891;
+  border-radius: 5em;
+  color: #ffffff;
+  border: 1px solid #6dcab5;
+  font-size: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+button:hover {
+  background-color: transparent;
+  color: #46a891;
+}
+button:active {
+  background-color: #46a891;
+  border-radius: 5em;
+  color: #ffffff;
+  border: 1px solid #46a891;
 }
 
 /* HEADER-------------------------------------------------------------------------------------------*/
@@ -37,14 +77,37 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  width: 15%;
+  width: 10%;
   margin-left: 5%;
 }
 
 /*CHARACTER PAGE-------------------------------------------------------------------------------------------*/
+.wrapper {
+  background-image: url(../images/index-background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.horizontal_logo {
+  width: 55%;
+}
 .char-container {
-  width: 60%;
-  margin-left: 25%;
+  text-align: center;
+  width: 90%;
+  margin: 5%;
+  color: #ffffff;
+}
+.list-box {
+  display: inline-block;
+  text-align: left;
+}
+ol.list {
+  margin: auto;
+  list-style-position: inside;
+  text-align: left;
 }
 .char-row {
   width: 90%;
@@ -64,197 +127,145 @@ header {
   width: 30%;
   box-sizing: border-box;
   margin: 1rem 0.25em;
-  background-color: #ffffff;
+  background-color: #f4f7f6;
+  padding: 10px, 10px, 10px, 10px;
   text-align: center;
-  padding: 5px 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.1s ease-in-out;
 }
 .card:hover {
   cursor: pointer;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 100px 0 rgba(0, 0, 0, 0.349);
 }
 .card-img {
-  width: 40%;
+  width: 60%;
+  margin-top: 5%;
+}
+.card-box {
+  width: 90%;
+  margin: 5%;
+}
+.title-box {
+  text-align: center;
+  padding: 0.2em;
+}
+.title {
+  color: #46a891;
+  margin-bottom: 0;
+}
+.alias {
+  margin-top: 0;
+}
+.description {
+  color: #666464;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.players-box {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a1;
+  display: none;
+}
+
+.hidden-content {
+  background-color: #e3dfd248;
+  background-image: -webkit-linear-gradient(30deg, #e3dfd2 50%, #46a891 50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 70%;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+.player-box {
+  float: left;
+  width: 33.33%;
+  margin: auto;
+}
+.versus {
+  margin-top: 70%;
+}
+.player-img {
+  width: 100%;
+}
+
+/*GAME BOARD PAGE-------------------------------------------------------------------------------------------*/
+
+/*FINALE PAGE-------------------------------------------------------------------------------------------*/
+
+.fin-container {
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.confettiBtn {
+  background-color: #f4976c;
+  border-radius: 5em;
+  color: #ffffff;
+  border: 1px solid #f4976c;
+  font-size: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+.confettiBtn:hover {
+  background-color: transparent;
+  color: #f4976c;
+}
+
+canvas {
+  width: 100%;
+  height: 90%;
+  position: fixed;
+  z-index: -1;
+  left: 0px;
+  right: 0px;
+  top: 0;
 }
 
 /*FOOTER-------------------------------------------------------------------------------------------*/
 footer {
-  background-color: #000000;
-  color: #ffffff;
+  bottom: 0;
+  margin: 0;
   width: 100%;
+  height: 180px;
+  text-align: center;
+  background-color: #f4f7f6;
 }
 .logo-footer {
   width: 10%;
 }
 .footer-column {
-  float: left;
-  width: 90%;
-  margin: 5%;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-.footer-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.footer-copyright {
   width: 100%;
+  padding-top: 1em;
   text-align: center;
-  color: #ffffff;
-  font-size: 0.6em;
-  font-weight: lighter;
 }
 .copyright {
   display: block;
-}
-.design {
-  display: block;
-}
-
-/*Media queries -------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 375px) {
-  h1 {
-    font-size: 1.5em;
-    margin-top: 0;
-  }
-
-  h2 {
-    font-size: 1em;
-  }
-
-  .card {
-    width: 100%;
-  }
-  .logo-footer {
-    width: 30%;
-  }
-}
-@media only screen and (min-width: 375px) and (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar-links ul li a {
-    padding: 0.8em 1.8em;
-    text-align: center;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 595px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar-links ul li a {
-    padding: 0.8em 1.8em;
-    text-align: center;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 595px) and (max-width: 690px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar-links ul li a {
-    padding: 0.8em 1.8em;
-    font-size: 0.5em;
-    text-align: center;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 690px) and (max-width: 800px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar-links ul li a {
-    padding: 0.8em 1.8em;
-    text-align: center;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar-links ul li a {
-    padding: 0.8em 1.8em;
-    text-align: center;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1320px) {
-  .navbar-links.active {
-    display: flex;
-  }
+  margin: 0;
+  font-size: 0.7em;
+  font-weight: lighter;
 }
