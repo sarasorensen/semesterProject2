@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
@@ -24,16 +28,18 @@
 
   <body>
     <header>
-      <div class="wrapper">
+      <div class="background">
         <div class="char-container">
           <article>
             <img
               class="horizontal_logo"
-              src="images/white-horizontal-logo.png"
+              src="images/horizontal_logo.png"
               alt="company logo Game Of Banners"
             />
-            <h1>Compete against your friends, and be the last one standing!</h1>
-  
+            <h1>
+              Compete against your friends for free, with no sign up needed!
+            </h1>
+
             <div class="list-box">
               <ol class="list">
                 <li>Choose 2 characters by clicking on their card.</li>
@@ -42,64 +48,55 @@
               </ol>
             </div>
           </article>
-          <button type="button" id="button">Play now</button>
+          <button class="button2" type="button" id="button">Play now</button>
         </div>
       </div>
     </header>
 
-   
-
-    <div class="char-row" id="card-row">
-      <div class="char-column" id="cards">
-        <div class="card"></div>
+    <div class="wrapper">
+      <div class="char-row" id="card-row">
+        <div class="char-column" id="cards">
+          <div class="card"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="players-box" id="players-box">
-      <div class="hidden-content" id="hidden-content">
-        <div class="row">
-          <div class="player-box">
-            <h3 class="playerId" id="player1">Player 1</h3>
-            <img
-              alt=""
-              class="player-img"
-              src="images/characters/char-ari.png"
-            />
-          </div>
+      <div id="localStorageVariable"></div>
 
-          <div class="player-box">
-            <p class="versus">vs</p>
-          </div>
+      <div class="players-box" id="players-box">
+        <div class="hidden-content" id="hidden-content">
+          <div class="row">
+            <h2 id="headline2"></h2>
+            <div class="player-col">
+              <h3 class="player-name" id="player1">Player 1</h3>
+              <div id="characterP1"></div>
+            </div>
 
-          <div class="player-box">
-            <h3 class="playerId" id="player2">Player 2</h3>
-            <img
-              alt=""
-              class="player-img"
-              src="images/characters/char-ari.png"
-            />
+            <div class="player-col">
+              <p class="versus">vs</p>
+            </div>
+
+            <div class="player-col">
+              <h3 class="player-name" id="player2">Player 2</h3>
+              <div id="characterP2"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
     <footer>
+      <div class="footer-column">
+        <a href="index.html">
+          <img
+            class="logo-footer"
+            src="images/small-logo@200x-8.png"
+            alt="Game Of Banners Logo"
+        /></a>
+      </div>
 
-        <div class="footer-column">
-          <a href="index.html">
-            <img
-              class="logo-footer"
-              src="images/small-logo@200x-8.png"
-              alt="Game Of Banners Logo"
-          /></a>
-        </div>
-
-        <div class="footer-column">
-          <p class="copyright">
-            © 2020 Game of Banners. Web design by Sara Sørensen.
-          </p>
-        </div>
+      <div class="footer-column">
+        <p class="copyright">
+          © 2020 Game of Banners. Web design by Sara Sørensen.
+        </p>
       </div>
     </footer>
 

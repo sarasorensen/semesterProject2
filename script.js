@@ -8,7 +8,7 @@ button.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
-const char = [
+const charJson = [
   {
     title: "Cersei Lannister",
     aliases: "The Queen",
@@ -92,8 +92,7 @@ const char = [
 ];
 
 //display characters
-var displayedChar = char;
-
+var displayedChar = charJson;
 var container = document.querySelector("#cards");
 
 container.innerHTML = "";
@@ -103,8 +102,8 @@ function renderChar() {
 
   displayedChar.forEach(function (character) {
     container.innerHTML += `
-    <div onClick="char_click(this.id)" id=${character.id} class="card">
-        <img   alt="${character.alt}" class="card-img"  src="${character.imageUrl}"</img>
+    <div class="card" >
+        <img onClick="select(this.id, this.src)" id="${character.id}" alt="${character.alt}" class="card-img" src="${character.imageUrl} "</img>
         <div class="card-box"> 
 
         <div class="title-box">
@@ -113,26 +112,66 @@ function renderChar() {
         </div>
 
         <p class="description">This character is known for ${character.skills}</p>
-        <button type="button" onClick="char_click(this.id)">Select</button>
+        <button class="button2" type="button" >Select</button>
         </div>
         </div>`;
   });
 }
-
 renderChar();
 
-//display box when char clicked
 const playersBox = document.getElementById("players-box");
+let playerDisplay = document.querySelectorAll("player-col");
+let counter = 0;
 
-function char_click(clicked_id) {
-  playersBox.style.display = "block";
+playerDisplay.innerHTML = "";
 
-  console.log(clicked_id);
+function select(id, src) {
+  console.log(id, src);
+
+  if (counter < 2) {
+    counter++;
+    if (counter === 1) {
+      localStorage.setItem("Player1", id);
+      localStorage.setItem("img1", src);
+
+      var player1 = localStorage.getItem("Player1");
+      var img1 = localStorage.getItem("img1");
+
+      document.getElementById("headline2").textContent =
+        "Please select player 2";
+      document.getElementById("characterP1").innerHTML += `
+          <img  class="card-img" alt="icon of chosen character" src="${img1} "</img>
+          <h3>${player1}</h3> `;
+      playersBox.style.display = "block";
+      setTimeout(function () {
+        playersBox.style.display = "none";
+      }, 3000);
+    } else {
+      localStorage.setItem("Player2", id);
+      localStorage.setItem("img2", src);
+
+      var player2 = localStorage.getItem("Player2");
+      var img2 = localStorage.getItem("img2");
+
+      document.getElementById("headline2").textContent = "Get ready to play!";
+      document.getElementById("characterP2").innerHTML += `
+        <img  class="card-img" alt="icon of chosen character" src="${img2} "</img>
+        <h3>${player2}</h3> `;
+      playersBox.style.display = "block";
+      setTimeout(function () {
+        playersBox.style.display = "none";
+      }, 2500);
+
+      setTimeout(function () {
+        window.location.replace("boardgame.html");
+      }, 1000);
+    }
+  }
 }
 
 //Close window if user clicks outside it
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
   if (event.target == playersBox) {
     playersBox.style.display = "none";
   }
-};
+});
