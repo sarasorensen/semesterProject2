@@ -108,16 +108,16 @@ function renderChar() {
     //console.log(id);
 
     container.innerHTML += `
-    <div   class="card" >
+    <div class="card">
         <div data-id="${id}" data-src="${src}"class="card-box"> 
-        <img id="${id}" alt="${character.alt}" class="card-img" src="${src}"</img>
+        <img alt="${character.alt}" class="card-img" src="${src}"</img>
 
         <div class="title-box">
         <h2 class="title">${character.title}</h2>
         <p class="alias"> ${character.aliases}</p>
         <p class="description">This character is known for ${character.skills}</p>
         </div>
-        <button id="button-important" onclick="chosen()"> select </button>
+        <button class="button2" onclick="chosen()"> select </button>
 </div>
  </div>`;
   });
@@ -126,19 +126,6 @@ function renderChar() {
 renderChar();
 
 const divs = document.querySelectorAll(".card > div");
-const btn = document.getElementById("#button-important");
-
-function chosen() {
-  for (let i = 0; i < divs.length; i++) {
-    console.log(divs[i].className);
-
-    divs[i].onclick = function () {
-      console.log(event.target.dataset.id + " + " + event.target.dataset.src);
-    };
-  }
-}
-
-chosen();
 
 const playersBox = document.getElementById("players-box");
 let playerDisplay = document.querySelectorAll("player-col");
@@ -146,52 +133,52 @@ let counter = 0;
 
 playerDisplay.innerHTML = "";
 
-function select(id, src) {
-  if (counter < 2) {
-    counter++;
-    if (counter === 1) {
-      localStorage.setItem("Player1", id);
-      localStorage.setItem("img1", src);
+function chosen() {
+  for (let i = 0; i < divs.length; i++) {
+    console.log(divs[i].className);
 
-      var player1 = localStorage.getItem("Player1");
-      var img1 = localStorage.getItem("img1");
+    divs[i].onclick = function () {
+      if (counter < 2) {
+        counter++;
+        if (counter === 1) {
+          localStorage.setItem("Player1", divs[i].dataset.id);
+          localStorage.setItem("img1", divs[i].dataset.src);
 
-      document.getElementById("headline2").textContent = "choose player 2";
+          var player1 = localStorage.getItem("Player1");
+          var img1 = localStorage.getItem("img1");
 
-      document.getElementById("characterP1").innerHTML += `
-          <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "</img>
-          <h2 class="player-name">Player 1</h2>
-          <h3 class="playerTitle">${player1}</h3> `;
-      playersBox.style.display = "block";
-      console.log(player1);
-      setTimeout(function () {
-        playersBox.style.display = "none";
-      }, 3500);
-      // How to handle when character is already chosen for player 1
-      //local storage remove item?
-      if (id === player1) {
-        console.log("This character is taken");
-        return;
+          document.getElementById("headline2").textContent = "choose player 2";
+
+          document.getElementById("characterP1").innerHTML += `
+                <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "</img>
+                <h2 class="player-name">Player 1</h2>
+                <h3 class="playerTitle">${player1}</h3> `;
+          playersBox.style.display = "block";
+          console.log(player1);
+          setTimeout(function () {
+            playersBox.style.display = "none";
+          }, 3500);
+        }
+      } else {
+        localStorage.setItem("Player2", divs[i].dataset.id);
+        localStorage.setItem("img2", divs[i].dataset.src);
+
+        var player2 = localStorage.getItem("Player2");
+        var img2 = localStorage.getItem("img2");
+
+        document.getElementById("headline2").textContent = "Get ready to play!";
+
+        document.getElementById("characterP2").innerHTML += `
+              <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "</img>
+              <h3 class="player-name">Player 2</h3>
+              <h3 class="playerTitle">${player2}</h3> `;
+        playersBox.style.display = "block";
+        setTimeout(function () {
+          playersBox.style.display = "none";
+          window.location.replace("boardgame.html");
+        }, 3500);
       }
-    } else {
-      localStorage.setItem("Player2", id);
-      localStorage.setItem("img2", src);
-
-      var player2 = localStorage.getItem("Player2");
-      var img2 = localStorage.getItem("img2");
-
-      document.getElementById("headline2").textContent = "Get ready to play!";
-
-      document.getElementById("characterP2").innerHTML += `
-        <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "</img>
-        <h3 class="player-name">Player 2</h3>
-        <h3 class="playerTitle">${player2}</h3> `;
-      playersBox.style.display = "block";
-      setTimeout(function () {
-        playersBox.style.display = "none";
-        window.location.replace("boardgame.html");
-      }, 3500);
-    }
+    };
   }
 }
 
