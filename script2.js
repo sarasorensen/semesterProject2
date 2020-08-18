@@ -117,7 +117,7 @@ function renderChar() {
         <p class="alias"> ${character.aliases}</p>
         <p class="description">This character is known for ${character.skills}</p>
         </div>
-        <button class="button2" onclick="chosen()"> select </button>
+        <button class="red-btn" id="importantBtn" onclick="chosen()"> select </button>
 </div>
  </div>`;
   });
@@ -125,7 +125,8 @@ function renderChar() {
 
 renderChar();
 
-const divs = document.querySelectorAll(".card > div");
+const cards = document.querySelectorAll(".card > div");
+const btn = document.getElementById("importantBtn");
 
 const playersBox = document.getElementById("players-box");
 let playerDisplay = document.querySelectorAll("player-col");
@@ -134,15 +135,16 @@ let counter = 0;
 playerDisplay.innerHTML = "";
 
 function chosen() {
-  for (let i = 0; i < divs.length; i++) {
-    console.log(divs[i].className);
+  for (let i = 0; i < cards.length; i++) {
+    console.log(cards[i].className);
 
-    divs[i].onclick = function () {
-      if (counter < 2) {
+    cards[i].onclick = function () {
+      console.log(this.dataset.id + " + " + this.dataset.src);
+      if (counter < 1) {
         counter++;
         if (counter === 1) {
-          localStorage.setItem("Player1", divs[i].dataset.id);
-          localStorage.setItem("img1", divs[i].dataset.src);
+          localStorage.setItem("Player1", cards[i].dataset.id);
+          localStorage.setItem("img1", cards[i].dataset.src);
 
           var player1 = localStorage.getItem("Player1");
           var img1 = localStorage.getItem("img1");
@@ -154,14 +156,29 @@ function chosen() {
                 <h2 class="player-name">Player 1</h2>
                 <h3 class="playerTitle">${player1}</h3> `;
           playersBox.style.display = "block";
-          console.log(player1);
           setTimeout(function () {
             playersBox.style.display = "none";
           }, 3500);
+          if (cards[i].dataset.id === player1) {
+            console.log(this.dataset.id + " the character is now taken");
+
+            cards[i].innerHTML = "";
+
+            cards[i].classList.add(".newCard");
+
+            var newText = document.createElement("newText");
+            newText.classList.add("newText");
+            cards[
+              i
+            ].innerHTML = `<div class="newCard"> <h2 class="newText">This character is taken</h2> </div>`;
+            cards[i].appendChild(newText);
+
+            return;
+          }
         }
       } else {
-        localStorage.setItem("Player2", divs[i].dataset.id);
-        localStorage.setItem("img2", divs[i].dataset.src);
+        localStorage.setItem("Player2", cards[i].dataset.id);
+        localStorage.setItem("img2", cards[i].dataset.src);
 
         var player2 = localStorage.getItem("Player2");
         var img2 = localStorage.getItem("img2");

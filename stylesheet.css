@@ -98,9 +98,7 @@ header {
 }
 /*CHARACTER PAGE-------------------------------------------------------------------------------------------*/
 .wrapper {
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #d8d7d7;
 }
 .horizontal_logo {
   width: 55%;
@@ -268,11 +266,11 @@ header {
 }
 .loader {
   margin: 0 auto;
-  border: 10px solid #234b52;
-  border-top: 10px solid #d8d7d7;
+  border: 5px solid #234b52;
+  border-top: 5px solid #d8d7d7;
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
+  width: 0.5em;
+  height: 0.5em;
   animation: spin 2s linear infinite;
 }
 
@@ -335,24 +333,23 @@ canvas {
 
 /*FOOTER-------------------------------------------------------------------------------------------*/
 footer {
-  bottom: 0;
   margin: 0;
   width: 100%;
-  height: 180px;
   text-align: center;
   background-color: #f4f7f6;
+  padding-bottom: 1em;
 }
 .logo-footer {
-  width: 10%;
+  width: 15%;
+  margin-top: 1em;
 }
 .footer-column {
   width: 100%;
-  padding-top: 1em;
   text-align: center;
 }
 .copyright {
   display: block;
   margin: 0;
-  font-size: 0.7em;
+  font-size: 0.5em;
   font-weight: lighter;
 }
