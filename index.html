@@ -14,10 +14,6 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
@@ -37,18 +33,18 @@
               alt="company logo Game Of Banners"
             />
             <h1>
-              Compete against your friends for free, with no sign up needed!
+              Play against your friends for free, with no sign up needed!
             </h1>
 
             <div class="list-box">
               <ol class="list">
-                <li>Choose 2 characters by clicking on their card.</li>
+                <li>Choose 2 characters by clicking on their image.</li>
                 <li>Once selected, the game will automatically begin.</li>
                 <li>Good luck & Watch out for the traps!</li>
               </ol>
             </div>
           </article>
-          <button class="button2" type="button" id="button">Play now</button>
+          <button class="red-btn" type="button" id="button">Play now</button>
         </div>
       </div>
     </header>
@@ -65,24 +61,20 @@
       <div class="players-box" id="players-box">
         <div class="hidden-content" id="hidden-content">
           <div class="row">
-            <h2 id="headline2"></h2>
-            <div class="player-col">
-              <h3 class="player-name" id="player1">Player 1</h3>
-              <div id="characterP1"></div>
+            <div id="characterP1" class="player-col"></div>
+
+            <div class="info-col">
+              <h2 id="headline2" class="headline2"></h2>
+
+              <p class="loader"></p>
             </div>
 
-            <div class="player-col">
-              <p class="versus">vs</p>
-            </div>
-
-            <div class="player-col">
-              <h3 class="player-name" id="player2">Player 2</h3>
-              <div id="characterP2"></div>
-            </div>
+            <div id="characterP2" class="player-col"></div>
           </div>
         </div>
       </div>
     </div>
+
     <footer>
       <div class="footer-column">
         <a href="index.html">

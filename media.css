@@ -4,13 +4,46 @@
     width: 100%;
     margin-top: 10%;
   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li a {
+    padding: 0.8em 1.8em;
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .card {
     width: 100%;
+  }
+  .loader {
+    width: 0.5em;
+    height: 0.5em;
   }
 
   .hidden-content {
     font-size: 0.5em;
     margin-top: 50%;
+  }
+  .col {
+    width: 90%;
+    margin: 5%;
+    margin-top: 15%;
+    font-size: 1em;
   }
 
   .logo-footer {
@@ -22,15 +55,46 @@
     width: 100%;
     margin-top: 10%;
   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li a {
+    padding: 0.8em 1.8em;
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .card {
     width: 100%;
   }
-
+  .loader {
+    width: 0.5em;
+    height: 0.5em;
+  }
   .hidden-content {
     font-size: 0.5em;
     margin-top: 50%;
   }
-
+  .col {
+    width: 90%;
+    margin: 5%;
+    margin-top: 15%;
+    font-size: 1em;
+  }
   .logo-footer {
     width: 20%;
   }
@@ -40,13 +104,45 @@
     width: 100%;
     margin-top: 10%;
   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li a {
+    padding: 0.8em 1.8em;
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .card {
     width: 100%;
   }
-
+  .loader {
+    width: 1em;
+    height: 1em;
+  }
   .hidden-content {
     font-size: 0.8em;
     margin-top: 40%;
+  }
+  .col {
+    width: 90%;
+    margin: 5%;
+    margin-top: 15%;
+    font-size: 1em;
   }
   .logo-footer {
     width: 20%;
@@ -57,13 +153,38 @@
     width: 90%;
     margin-top: 10%;
   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li a {
+    padding: 0.8em 1.8em;
+    font-size: 0.5em;
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .card {
-    width: 45%;
+    width: 100%;
   }
   .hidden-content {
     font-size: 0.8em;
     margin-top: 35%;
   }
+
   .logo-footer {
     width: 30%;
   }
@@ -73,6 +194,29 @@
     width: 80%;
     margin-top: 10%;
   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li a {
+    padding: 0.8em 1.8em;
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .card {
     width: 45%;
   }
@@ -80,13 +224,40 @@
     font-size: 1em;
     margin-top: 20%;
   }
+
   .logo-footer {
     width: 20%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li a {
+    padding: 0.8em 1.8em;
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .card {
     width: 40%;
+  }
+  .player-name {
+    letter-spacing: 0em;
   }
   .hidden-content {
     margin-top: 15%;

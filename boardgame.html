@@ -7,8 +7,9 @@
       name="description"
       content="Game of Banners is a free online board game, enjoy with friends and family today!"
     />
-    <link rel="stylesheet" href="styles/stylesheet.css" />
     <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+    <link rel="stylesheet" href="styles/game.css" />
     <link rel="stylesheet" href="styles/media.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -20,11 +21,11 @@
     />
 
     <link rel="icon" href="images/rel-icon.png" />
-    <title>Game Of Banners - The Finale Page</title>
+    <title>Game Of Banners - The Game </title>
   </head>
 
-  <body>
-    <div class="fin-container">
+  <body onload="getStorage()">
+
       <header>
         <nav class="navbar" id="navbar">
           <a class="logo-header-a" href="index.html"
@@ -42,39 +43,36 @@
 
           <div class="navbar-links">
             <ul>
-              <li class="link"><a href="index.html">New Game</a></li>
+              <li class="link"><a href="javascript:AlertIt();">New Game</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <canvas id="canvas"
-        >Your browser does not support canvas, please update it.</canvas
-      >
+      <div class="game-wrapper">
+      <div class="sidebar">
+        <div class="info-box">
+        <h1 class="game">Instructions</h1>
 
-      <div class="col">
-        <article>
-          <h1>Sett inn vinner her win!</h1>
-          <h2 class="finale-h2">Your banner sits on the throne</h2>
-          <p>Celebrate with some fun confetti, or play again.</p>
+        <div class="sidebar-box" id="player1"></div>
 
-          <button type="button" id="confettiBtn" class="red-btn">
-            Celebrate
-          </button>
+        <div class="sidebar-box" id="player2"></div>
 
-          <a href="index.html" class="blue-btn">Play Again</a>
-        </article>
+        <div class="dice-box">
+          <h2 id="currentPlayer" class="currentPlayer">"player 1" your turn</h2>
+       
+          <p class="placeholder" id="placeholder"></p>
+         
+          <button class="blue-btn__game" id="button">Roll Dice</button>
+        </div>
+      </div>
+       
       </div>
 
-      <div class="col2">
-        <img
-          class="col2-img"
-          src="images/winner2_1.png"
-          alt="company logo Game Of Banners"
-        />
-      </div>
+
     </div>
 
+  </div>
     <footer>
       <div class="footer-column">
         <a href="index.html">
@@ -91,6 +89,6 @@
         </p>
       </div>
     </footer>
-    <script src="scripts/finale.js"></script>
+    <script src="scripts/game.js"></script>
   </body>
 </html>

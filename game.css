@@ -1,0 +1,91 @@
+/*GAME BOARD PAGE-------------------------------------------------------------------------------------------*/
+.game-wrapper {
+  background-color: #d8d7d7;
+}
+.sidebar {
+  display: inline-block;
+  margin-left: 1em;
+  margin-bottom: 5%;
+  margin-top: 7%;
+  width: 35%;
+  color: #000000;
+  text-align: left;
+  background-color: #f4f7f6;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.info-box {
+  width: 100%;
+  color: #000000;
+}
+.game {
+  font-size: 2em;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+.blue-btn__game {
+  background-color: #234b52;
+  color: #ffffff;
+  border: 1px solid #234b52;
+  font-size: 1em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+.blue-btn__game:hover {
+  background-color: transparent;
+  color: #234b52;
+}
+.blue-btn__game:focus {
+  outline: none;
+}
+.sidebar-box {
+  display: inline-block;
+  width: 35%;
+  margin: 2em;
+  margin-top: 0.5em;
+}
+.player-game__img {
+  float: left;
+  width: 35%;
+}
+.playerId {
+  font-size: 1.5em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.playerScore {
+  text-transform: uppercase;
+}
+.currentPlayer {
+  text-transform: uppercase;
+  color: #234b52;
+  margin-top: 1em;
+}
+.dice-box {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.placeholder {
+  height: 30px;
+  width: 50px;
+  border: 1px solid transparent;
+  text-align: center;
+  margin: auto;
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #000000;
+}
