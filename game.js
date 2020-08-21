@@ -28,35 +28,28 @@ function getStorage() {
   `;
 }
 
-//dice
-var dice = {
-  sides: 6,
-  roll: function () {
-    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-    return randomNumber;
-  },
-};
-
 const button = document.getElementById("button");
 
-let turn;
-let playerDisplay = true;
+let turn, scoreP1, scoreP2;
 
-button.onclick = function () {
-  let result = dice.roll();
-  console.log(result);
+button.addEventListener("click", function () {
+  var diceNumber = Math.floor(Math.random() * 6) + 1;
 
-  let scoreP2 = result;
-  let scoreP1 = result;
+  console.log("dice result = " + diceNumber);
+
+  scoreP1 = diceNumber;
+  scoreP2 = diceNumber;
+
   if (turn == 0) {
     turn = 1;
+
     document.getElementById("player1").innerHTML += `
-    <p class="player1Score">${scoreP2}</p>
+    <p class="player1Score">${scoreP1}</p>
     `;
 
+    //Player 2's turn display
     var currentPlayer = document.getElementById("currentPlayer2");
     document.getElementById("currentPlayer2").style.display = "block";
-
     var currentPlayer = document.getElementById("currentPlayer1");
     document.getElementById("currentPlayer1").style.display = "none";
 
@@ -64,11 +57,13 @@ button.onclick = function () {
   } else {
     turn = 0;
     document.getElementById("player2").innerHTML += `
-    <p class="player2Score">${scoreP1} </p>
+    <p class="player2Score">${scoreP2} </p>
     `;
+
+    //Player 1's turn display
     var currentPlayer = document.getElementById("currentPlayer1");
     document.getElementById("currentPlayer1").style.display = "block";
     var currentPlayer = document.getElementById("currentPlayer2");
     document.getElementById("currentPlayer2").style.display = "none";
   }
-};
+});
