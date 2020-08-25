@@ -25,6 +25,7 @@ function getStorage() {
   <p class="playerScore">Score:</p>
   `;
 }
+
 //Display for who starts
 const currentPlayer2 = document.getElementById("currentPlayer2");
 currentPlayer2.style.display = "none";
@@ -41,11 +42,13 @@ var dice = {
 };
 
 const button = document.getElementById("button");
+const gameOverBox = document.getElementById("gameOverBox");
 
 let isGameActive = true;
+const boardField = document.querySelectorAll("#game-card");
 
-var player1Active = true;
-var player2Active = false;
+var player1Name = localStorage.getItem("Player1");
+var player2Name = localStorage.getItem("Player2");
 
 let turn = 0;
 var rolledDice = 1;
@@ -54,119 +57,95 @@ var rolledDice = 1;
 button.addEventListener("click", function () {
   if (isGameActive) {
     dice.roll();
-    if (rolledDice < 31) {
-      console.log("dice rolled number of times = " + rolledDice);
+    if (rolledDice < 30) {
+      console.log(rolledDice);
       rolledDice++;
-    } else if (rolledDice === 31) {
+    } else if (rolledDice === 30) {
+      var timeleft = 10;
+      gameOverBox.style.display = "block";
       isGameActive = false;
-      alert("game over");
+      setTimeout(function () {
+        window.location = "finale.html";
+      }, 4500);
     }
   }
   if (turn == 0) {
     turn = 1;
-    player1Active = true;
-    player2Active = false;
     player1();
   } else {
-    player1Active = false;
-    player2Active = true;
     player2();
   }
 });
 
+//Function for player 1
 let scoreP1 = 0;
 
 function player1() {
   let result = dice.roll();
 
-  scoreP1 = result;
+  //Score display player 1
+  scoreP1 = scoreP1 + result;
 
-  console.log("p1 dice result = " + scoreP1);
+  const p1Display = document.getElementById("player1");
 
-  document.getElementById("player1").innerHTML += `
-  <p class="player1Score">${scoreP1}</p>`;
+  p1Display.innerHTML = "";
+  var player1 = localStorage.getItem("Player1");
+  var img1 = localStorage.getItem("img1");
 
-  localStorage.setItem("score Player1", scoreP1);
-
-  turn++;
-  if (rolledDice >= 2) {
-    //returning score as a number
-    localStorage.getItem("score Player1");
-
-    const parsedP1 = parseInt(scoreP1);
-    if (isNaN(parsedP1)) {
-      return 0;
-    }
-
-    //addedScoreP1 = scoreP1 + parsedP1;
-
-    //Score display player 1
-    document.getElementById("player1").innerHTML = "";
-
-    var player1 = localStorage.getItem("Player1");
-    var img1 = localStorage.getItem("img1");
-
-    document.getElementById("player1").innerHTML += `
+  p1Display.innerHTML += `
   <h2 class="playerId">Player 1</h2>
   <h3 class="playerTitle">${player1}</h3>
   <img class="card-img-chosen" alt="picture of player 1 character" src="${img1} "</img>
-  <p class="playerScore">Score: ${parsedP1}</p>`;
+  <p class="player1Score">Score: ${scoreP1}</p>`;
 
-    //Display of rolled dice
-    let placeholder = document.getElementById("placeholder");
-    placeholder.innerHTML = "";
-    placeholder.innerHTML = `<p class="placeholderText">Player 1 you rolled a ${scoreP1}</p>`;
+  //Display of rolled dice
+  let placeholder = document.getElementById("placeholder");
+  placeholder.innerHTML = "";
+  placeholder.innerHTML = `<p class="placeholderText">Player 1 you rolled a ${result}</p>`;
 
-    //Player 2's turn display
-    currentPlayer2.style.display = "block";
-    currentPlayer1.style.display = "none";
-  }
+  //Player 2's turn display
+  currentPlayer2.style.display = "block";
+  currentPlayer1.style.display = "none";
+
+  turn++;
 }
+
+//Function for player 2
 let scoreP2 = 0;
 
 function player2() {
   let result = dice.roll();
-
   turn = 0;
-  scoreP2 = result;
 
-  console.log("p2 dice result = " + scoreP2);
+  //Score display player 2
+  scoreP2 = scoreP2 + result;
 
-  document.getElementById("player2").innerHTML += `
-  <p class="player2Score">${scoreP2} </p>`;
+  const p2Display = document.getElementById("player2");
 
-  localStorage.setItem("score Player2", scoreP2);
+  p2Display.innerHTML = "";
+  var player2 = localStorage.getItem("Player2");
+  var img2 = localStorage.getItem("img2");
 
-  if (rolledDice >= 2) {
-    //returning score as a number
-    localStorage.getItem("score Player2");
-
-    const parsedP2 = parseInt(scoreP2);
-    if (isNaN(parsedP2)) {
-      return 0;
-    }
-    console.log(parsedP2);
-
-    //addedScoreP2 = scoreP2 + parsedP2;
-
-    //Score display player 2
-    document.getElementById("player2").innerHTML = "";
-    var player2 = localStorage.getItem("Player2");
-    var img2 = localStorage.getItem("img2");
-
-    document.getElementById("player2").innerHTML += `
+  p2Display.innerHTML += `
   <h2 class="playerId">Player 2</h2>
   <h3 class="playerTitle">${player2}</h3> 
   <img class="card-img-chosen" alt="picture of player 2 character" src="${img2} "</img>
-  <p class="playerScore">Score: ${parsedP2}</p>`;
+  <p class="player2Score">Score: ${scoreP2}</p>`;
 
-    //Display of rolled dice
-    let placeholder = document.getElementById("placeholder");
-    placeholder.innerHTML = "";
-    placeholder.innerHTML = `<p class="placeholderText"> Player 2 you rolled a ${scoreP2}</p>`;
+  //Display of rolled dice
+  let placeholder = document.getElementById("placeholder");
+  placeholder.innerHTML = "";
+  placeholder.innerHTML = `<p class="placeholderText"> Player 2 you rolled a ${result}</p>`;
 
-    //Player 1's turn display
-    currentPlayer1.style.display = "block";
-    currentPlayer2.style.display = "none";
-  }
+  //Player 1's turn display
+  currentPlayer1.style.display = "block";
+  currentPlayer2.style.display = "none";
 }
+
+boardField.forEach(function (gameCard) {
+  let fieldNumber = gameCard.dataset["number"];
+  console.log(fieldNumber);
+  if (fieldNumber === scoreP2) {
+    fieldNumber.style.backgroundColor = "red";
+  }
+});
