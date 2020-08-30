@@ -152,7 +152,7 @@ function chosen() {
           document.getElementById("headline2").textContent = "choose player 2";
 
           document.getElementById("characterP1").innerHTML += `
-                <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "</img>
+                <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "/>
                 <h2 class="player-name">Player 1</h2>
                 <h3 class="playerTitle">${player1}</h3> `;
           playersBox.style.display = "block";
@@ -185,7 +185,7 @@ function chosen() {
         document.getElementById("headline2").textContent = "Get ready to play!";
 
         document.getElementById("characterP2").innerHTML += `
-              <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "</img>
+              <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "/>
               <h3 class="player-name">Player 2</h3>
               <h3 class="playerTitle">${player2}</h3> `;
         playersBox.style.display = "block";

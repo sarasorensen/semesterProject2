@@ -1,3 +1,9 @@
+//clear storage
+function clear() {
+  window.location = "index.html";
+  localStorage.clear();
+}
+
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
