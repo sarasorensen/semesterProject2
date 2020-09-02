@@ -1,8 +1,8 @@
 /*e3dfd2 body bckg f4f7f6
 #f4f7f6 background color card
 234B52 blue
-a94442 red
-d8d7d7 grey
+a94442 orange
+f0f0f0 grey
 */
 html {
   height: 100%;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 h3 {
   font-family: "Playfair Display", serif;
@@ -39,14 +39,36 @@ h3 {
   font-size: 1em;
   font-weight: bold;
 }
+.white-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-size: 1.2em;
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+.white-btn:hover {
+  background-color: #234b52;
+  border-color: #234b52;
+  color: #ffffff;
+  transition: 0.3s ease-in-out 0s;
+}
+.white-btn:focus {
+  outline: none;
+}
 
 .blue-btn {
   background-color: #234b52;
-  border-radius: 5em;
   color: #ffffff;
   border: 1px solid #234b52;
   font-size: 1em;
-  padding: 1em;
+  padding: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
   margin-top: 2em;
@@ -64,11 +86,10 @@ h3 {
 }
 .red-btn {
   background-color: #a94442;
-  border-radius: 5em;
   color: #ffffff;
   border: 1px solid #a94442;
   font-size: 1em;
-  padding: 1em;
+  padding: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
   margin-top: 2em;
@@ -97,20 +118,45 @@ header {
   margin-left: 2em;
 }
 /*CHARACTER PAGE-------------------------------------------------------------------------------------------*/
-.wrapper {
-  background-color: #d8d7d7;
-}
 .horizontal_logo {
   width: 55%;
 }
 .background {
   width: 100%;
-  background-image: url(../images/background.jpg);
+
+  background-image: url(../images/offback.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
+}
+.wrapper {
+  background-color: #234b52;
+  padding-top: 2.5em;
+  margin: 0;
+  width: 100%;
+}
+.CTA {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  margin-top: 0;
+  color: #ffffff;
+}
+.container {
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  background-color: transparent;
+  margin-bottom: 1.5em;
+}
+.char-heading {
+  width: 20%;
+  margin-left: 3em;
+  color: #ffffff;
+  border-top: 3px solid #ffffff;
+  text-transform: uppercase;
 }
 .char-container {
   text-align: center;
@@ -123,6 +169,7 @@ header {
 }
 .list {
   font-size: 1.3em;
+  padding: 0;
   margin: auto;
   list-style-position: inside;
   text-align: left;
@@ -235,7 +282,6 @@ header {
   padding: 0.5em 2em 1em 2em;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2em;
 }
 .player-col {
   float: left;
@@ -311,24 +357,22 @@ canvas {
   text-transform: uppercase;
 }
 .col {
-  float: left;
   font-size: 1.3em;
-  width: 40%;
+  width: 80%;
+  height: 100%;
   margin-top: 15%;
   margin-left: 10%;
   text-align: left;
 }
-.col2 {
-  float: left;
-  width: 50%;
-  margin-top: 5%;
-  margin-left: -5%;
-}
-.col2-img {
+
+.col-img {
   float: right;
-  width: 90%;
+  width: 50%;
   margin-left: 5%;
   margin: 0;
+}
+.hidden-img {
+  display: none;
 }
 
 /*FOOTER-------------------------------------------------------------------------------------------*/
@@ -337,6 +381,7 @@ footer {
   width: 100%;
   text-align: center;
   background-color: #f4f7f6;
+  color: #000000;
   padding-bottom: 1em;
 }
 .logo-footer {

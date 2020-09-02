@@ -24,7 +24,7 @@
     <title>Game Of Banners - The Game </title>
   </head>
 
-  <body onload="getStorage()">
+  <body>
 
       <header>
         <nav class="navbar" id="navbar">
@@ -47,15 +47,28 @@
         <div class="info-box">
         <h1 class="game">Instructions</h1>
 
-        <div class="sidebar-box" id="player1"></div>
+        <h2 id="currentPlayer1" class="currentPlayer1">Player 1 your turn</h2>
+        <h2 id="currentPlayer2" class="currentPlayer2">Player 2 your turn</h2>
 
-        <div class="sidebar-box" id="player2"></div>
+        <div class="sidebar-box" id="player1">
+          <h2 class="playerId">Player 1</h2>
+          <h3 class="playerTitle one"></h3>
+          <img class="card-img-chosen one" alt="picture of player 1 character" src=""/>
+          <p class="player1Score">Score: <span></span></p>
+        </div>
+
+        <div class="sidebar-box" id="player2">
+
+          <h2 class="playerId">Player 2</h2>
+          <h3 class="playerTitle two"></h3>
+          <img class="card-img-chosen two" alt="picture of player 2 character" src=""/>
+          <p class="player2Score">Score: <span></span></p>
+        </div>
 
         <div class="dice-box">
-          <h2 id="currentPlayer1" class="currentPlayer">Player 1 your turn</h2>
-          <h2 id="currentPlayer2" class="currentPlayer">Player 2 your turn</h2>
+
        
-          <p class="placeholder" id="placeholder"></p>
+          <div class="placeholder" id="placeholder"></div>
          
           <button class="blue-btn__game" id="button">Roll Dice</button>
 
@@ -65,151 +78,149 @@
       </div>
        
       </div>
-      <section class="container-boardgame">
+
+       
+      <section id ="container-boardgame" class="container-boardgame">
       <div class="board-game">
-        <div class="game-card">
-        <p>Start</p>
+        <div id="game-card" class="game-card" data-number="1"  data-display="Start" data-trap="none">
+<p>Start</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="2"  data-display="2" data-trap="none">
           <p>2</p>
         </div>
     
-        <div class="game-card trap">
-          <img
-          class="trap-img"
-          src="images/icons/dragon.png"
-          alt="icon of a dragon"
-        />
+        <div id="game-card" class="game-card"  data-number="3" data-display="3" data-trap="none">
+          <p>3</p>
         </div>
 
-        <div class="game-card">
-         <p>4</p>
+        <div id="game-card" class="game-card" data-number="4"  data-display="4" data-trap="none">
+          <p>4</p>
         </div>
     
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="5" data-display="5" data-trap="none">
           <p>5</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="6" data-display="6" data-trap="none" >
           <p>6</p>
         </div>
     
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="7" data-display="7"data-trap="none">
           <p>7</p>
         </div>
 
-        <div class="game-card trap">
-          <img
-          class="trap-img"
-          src="images/icons/fire.png"
-          alt="icon of a fire"
-        />
+        <div id="game-card" class="game-card" data-number="none"  data-display="8" data-trap="8" data-text="A group of soldier has attacked! you will loose 3 spaces." data-image="fire.png">
+          <p>8</p>
         </div>
     
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="9" data-display="9" data-trap="none">
           <p>9</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="10" data-display="10" data-trap="none">
           <p>10</p>
         </div>
     
-        <div class="game-card">
-         <p>11</p>
+        <div id="game-card" class="game-card" data-number="11"data-display="11" data-trap="none">
+          <p>11</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="none" data-display="12" data-trap="12" data-text="Winter is here, you will loose 3 spaces to seek shelter." data-image="fire.png">
           <p>12</p>
         </div>
 
-        <div class="game-card">
-        <p>13</p>
+        <div id="game-card" class="game-card" data-number="13" data-display="13" data-trap="none">
+          <p>13</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="14" data-display="14" data-trap="none">
           <p>14</p>
         </div>
 
-        <div class="game-card">
-         <p>15</p>
+        <div id="game-card" class="game-card" data-number="15" data-display="15" data-trap="none">
+          <p>15</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="16"data-display="16"  data-trap="none">
           <p>16</p>
         </div>
 
-        <div class="game-card trap">
-          <img
-          class="trap-img"
-          src="images/icons/stark.png"
-          alt="icon of a banner"
-        />
+        <div id="game-card" class="game-card" data-number="none" data-display="17" data-trap="17" data-text="Your banner ran out of food, you will loose 3 spaces to seek refuge." data-image="stark.png">
+          <p>17</p>
         </div>
 
-        <div class="game-card">
-        <p>18</p>
+        <div id="game-card" class="game-card" data-number="18" data-display="18" data-trap="none">
+          <p>18</p>
         </div>
 
-        <div class="game-card trap">
-          <img
-          class="trap-img"
-          src="images/icons/ice.png"
-          alt="icon of a banner"
-        />
+        <div id="game-card" class="game-card" data-number="19" data-display="19"  data-trap="none">
+          <p>19</p>
         </div>
 
-        <div class="game-card">
+        <div id="game-card" class="game-card" data-number="20" data-display="20" data-trap="none">
           <p>20</p>
         </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="21" data-display="21" data-trap="none">
             <p>21</p>
           </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="22" data-display="22" data-trap="none">
             <p>22</p>
           </div>
 
-          <div class="game-card">
-           <p>23</p>
+          <div id="game-card" class="game-card" data-number="none" data-display="23" data-trap="23" data-text="You met a white walker, you will loose 3 spaces." data-image="ice.png">
+            <p>23</p>
           </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="24" data-display="24" data-trap="none">
             <p>24</p>
           </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="25" data-display="25" data-trap="none">
             <p>25</p>
           </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="26" data-display="26" data-trap="none">
             <p>26</p>
           </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="27" data-display="27" data-trap="none">
             <p>27</p>
           </div>
 
-          <div class="game-card trap">
-            <img
-          class="trap-img"
-          src="images/icons/lannister.png"
-          alt="icon of a banner"
-        />
+          <div id="game-card" class="game-card" data-number="none" data-display="28" data-trap="28" data-text="Deanerys's dragons have blocked the road, you will loose 3 spaces." data-image="dragon.png">
+            <p>28</p>
           </div>
 
-          <div class="game-card">
+          <div id="game-card" class="game-card" data-number="29" data-display="29" data-trap="none">
             <p>29</p>
           </div>
 
-          <div class="game-card">
-            <p>Finish</p>
+          <div id="game-card" class="game-card" data-number="30" data-display="Finish" data-trap="none">
+            <p>30</p>
           </div>
         </section>
       </div>
 
+
+      <div id="gameOverBox" class="gameOverBox">
+        <div class="hidden">
+          <h3>Game over</h3>
+        <p>Revealing winner</p>
+
+      </div>
+      </div>
+
+      <div id="trapBox" class="trapBox">
+   <div class="hidden">
+
+   </div>
+      </div>
+
     </div>
+
 
   </div>
     <footer>
@@ -228,6 +239,10 @@
         </p>
       </div>
     </footer>
-    <script src="scripts/game.js"></script>
+    <script src="scripts/utils/tokens.js"></script>
+    <script src="scripts/utils/winner.js"></script>
+    <script src="scripts/utils/warning.js"></script>
+    <script src="scripts/utils/dice.js"></script>
+    <script src="scripts/boardgame.js"></script>
   </body>
 </html>

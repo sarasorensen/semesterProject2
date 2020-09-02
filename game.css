@@ -2,11 +2,12 @@
 .game-wrapper {
   background-color: #d8d7d7;
 }
+
 .sidebar {
   display: inline-block;
-  margin-left: 1em;
-  margin-bottom: 5%;
-  margin-top: 7%;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  margin-top: 10%;
   width: 35%;
   color: #000000;
   text-align: left;
@@ -66,9 +67,17 @@
 .playerScore {
   text-transform: uppercase;
 }
-.currentPlayer {
+
+.currentPlayer1 {
+  display: none;
   text-transform: uppercase;
   color: #234b52;
+  margin-top: 1em;
+}
+.currentPlayer2 {
+  display: none;
+  text-transform: uppercase;
+  color: #a94442;
   margin-top: 1em;
 }
 .dice-box {
@@ -79,13 +88,85 @@
 }
 
 .placeholder {
-  height: 30px;
-  width: 50px;
   border: 1px solid transparent;
-  text-align: center;
   margin: auto;
   margin-top: 0;
   margin-bottom: 0.5em;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #000000;
+  text-transform: uppercase;
+}
+.placeholderText {
+  margin: 0;
+}
+.container-boardgame {
+  float: right;
+  width: 50%;
+  margin-top: 7%;
+  margin-right: 5%;
+}
+.board-game {
+  padding: 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000;
+}
+
+.game-card {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 0;
+  background-color: #f4f7f6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+}
+.trapBox {
+  display: none;
+  cursor: default;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a1;
+}
+.board-img {
+  width: 80%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.icon {
+  width: 50%;
+}
+.gameOverBox {
+  display: none;
+  cursor: default;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a1;
+}
+.hidden {
+  background-color: #f4f7f6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+  color: #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 70%;
+  padding: 0.5em 2em 1em 2em;
+  text-align: center;
+  font-size: 2em;
 }

@@ -26,16 +26,15 @@
     <header>
       <div class="background">
         <div class="char-container">
-          <article>
-            <img
-              class="horizontal_logo"
-              src="images/horizontal_logo.png"
-              alt="company logo Game Of Banners"
-            />
-            <h1>
+          <img
+            class="horizontal_logo"
+            src="images/white-horizontal-logo.png"
+            alt="company logo Game Of Banners"
+          />
+          <div class="container">
+            <p class="CTA">
               Play against your friends for free, with no sign up needed!
-            </h1>
-
+            </p>
             <div class="list-box">
               <ol class="list">
                 <li>Choose 2 characters by clicking on their button.</li>
@@ -43,20 +42,21 @@
                 <li>Good luck & Watch out for the traps!</li>
               </ol>
             </div>
-          </article>
-          <button class="red-btn" type="button" id="button">Play now</button>
+          </div>
+
+          <button class="white-btn" type="button" id="button">Play now</button>
         </div>
       </div>
     </header>
 
     <div class="wrapper">
+      <h1 class="char-heading">The characters</h1>
+
       <div class="char-row" id="card-row">
         <div class="char-column" id="cards">
           <div class="card"></div>
         </div>
       </div>
-
-      <div id="localStorageVariable"></div>
 
       <div class="players-box" id="players-box">
         <div class="hidden-content" id="hidden-content">
@@ -92,6 +92,7 @@
       </div>
     </footer>
 
+    <script src="scripts/constants/characters.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>

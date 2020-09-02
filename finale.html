@@ -34,40 +34,45 @@
               alt="company logo Game Of Banners"
           /></a>
 
-          <div class="navbar-links">
-            <ul>
-              <li class="link"><a href="index.html">New Game</a></li>
-            </ul>
-          </div>
+          <ul class="menubar">
+            <li><a href="javascript:clear();">New Game</a></li>
+          </ul>
         </nav>
       </header>
-
       <canvas id="canvas"
         >Your browser does not support canvas, please update it.</canvas
       >
 
-      <div class="col">
+      <div class="col"> 
+         <img
+        class="col-img"
+        src="images/winner2_1.png"
+        alt="company logo Game Of Banners"
+      />
         <article>
-          <h1>Sett inn vinner her win!</h1>
-          <h2 class="finale-h2">Your banner sits on the throne</h2>
+          <h1>Congratulations</h1>
+          <h2 class="finale-h2" id="winner"></h2>
           <p>Celebrate with some fun confetti, or play again.</p>
 
+          <div class="btn-group">
           <button type="button" id="confettiBtn" class="red-btn">
             Celebrate
           </button>
 
-          <a href="index.html" class="blue-btn">Play Again</a>
+          <button onclick ="redirect()"  href="index.html" class="blue-btn">Play Again</button>
+        </div>
         </article>
+
+      <div class="hidden-img">
+        <img
+      class="img-hidden"
+        src="images/winner2_1.png"
+        alt="company logo Game Of Banners"
+      />
+      </div>
       </div>
 
-      <div class="col2">
-        <img
-          class="col2-img"
-          src="images/winner2_1.png"
-          alt="company logo Game Of Banners"
-        />
-      </div>
-    </div>
+
 
     <footer>
       <div class="footer-column">

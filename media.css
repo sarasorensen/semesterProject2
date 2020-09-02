@@ -8,20 +8,30 @@
     margin-top: 10%;
   }
   .col {
-    width: 95%;
-    margin-left: 1em;
-    margin-bottom: 10%;
+    font-size: 1em;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-  .red-btn,
-  .blue-btn {
-    padding: 0.5em;
+  .col-img {
+    display: none;
   }
-  .col2 {
-    float: none;
+  .btn-group button {
+    margin-bottom: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+  }
+  .hidden-img {
+    display: block;
     width: 90%;
     margin: 5%;
   }
-  .col2-img {
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
   }
   .card {
@@ -43,20 +53,39 @@
     width: 100%;
     margin-top: 10%;
   }
-  .red-btn,
-  .blue-btn {
-    padding: 0.8em;
-  }
-  .col {
-    width: 100%;
+  .btn-group button {
     margin-bottom: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
   }
-  .col2 {
-    float: none;
+
+  .col {
+    font-size: 1em;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .col-img {
+    display: none;
+  }
+  .btn-group button {
+    margin-bottom: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+  }
+  .hidden-img {
+    display: block;
     width: 90%;
     margin: 5%;
   }
-  .col2-img {
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
   }
   .card {
@@ -86,16 +115,30 @@
     margin-top: 40%;
   }
   .col {
+    font-size: 1em;
     width: 90%;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-  .col2 {
-    float: none;
+  .col-img {
+    display: none;
+  }
+  .btn-group button {
+    margin-bottom: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+  }
+  .hidden-img {
+    display: block;
     width: 90%;
     margin: 5%;
   }
-  .col2-img {
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
   }
   footer {
@@ -110,17 +153,26 @@
     width: 90%;
     margin-top: 10%;
   }
-  .col {
-    width: 90%;
-    margin-bottom: 10%;
+  .col-img {
+    display: none;
   }
-  .col2 {
-    float: none;
+  .btn-group button {
+    margin-bottom: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+  }
+  .hidden-img {
+    display: block;
     width: 90%;
     margin: 5%;
   }
-  .col2-img {
-    width: 100%;
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
   .card {
     width: 100%;
@@ -141,14 +193,19 @@
     width: 80%;
     margin-top: 10%;
   }
-  .col {
-    width: 65%;
-    margin-bottom: 5%;
+  .col-img {
+    display: none;
   }
-  .col2 {
-    width: 100%;
+
+  .hidden-img {
+    display: block;
+    width: 90%;
+    margin: 5%;
   }
-  .col2-img {
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
   }
   .card {
@@ -166,16 +223,19 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .col {
-    width: 60%;
-    margin-bottom: 5%;
+  .col-img {
+    display: none;
   }
-  .col2 {
-    width: 35%;
-    margin-left: -10%;
-    margin-top: 10%;
+
+  .hidden-img {
+    display: block;
+    width: 90%;
+    margin: 5%;
   }
-  .col2-img {
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
   }
   .card {
@@ -195,8 +255,19 @@
   .hidden-content {
     margin-top: 10%;
   }
-  .col {
-    width: 45%;
-    margin-bottom: 5%;
+  .col-img {
+    display: none;
+  }
+
+  .hidden-img {
+    display: block;
+    width: 90%;
+    margin: 5%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
   }
 }
