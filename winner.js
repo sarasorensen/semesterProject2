@@ -1,4 +1,4 @@
-function checkWinnerP1() {
+function checkP1() {
   if (scoreP1 >= 30) {
     localStorage.setItem("Winner", JSON.stringify(player1));
     gameOverBox.style.display = "block";
@@ -7,10 +7,11 @@ function checkWinnerP1() {
       window.location = "finale.html";
     }, 4500);
   } else {
-    console.log("error no winners");
+    isGameActive = true;
   }
 }
-function checkWinnerP2() {
+
+function checkP2() {
   if (scoreP2 >= 30) {
     localStorage.setItem("Winner", JSON.stringify(player2));
     gameOverBox.style.display = "block";
@@ -19,6 +20,6 @@ function checkWinnerP2() {
       window.location = "finale.html";
     }, 4500);
   } else {
-    console.log("error no winners");
+    isGameActive = true;
   }
 }

@@ -2,73 +2,77 @@
 let button = document.getElementById("button");
 
 button.addEventListener("click", function (event) {
-    document.getElementById("card-row").scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    event.stopPropagation();
+  document
+    .getElementById("card-row")
+    .scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  event.stopPropagation();
 });
 
 function chosen() {
-    for (let i = 0; i < cards.length; i++) {
-        console.log(cards[i].className);
+  for (let i = 0; i < cards.length; i++) {
+    console.log(cards[i].className);
 
-        cards[i].onclick = function () {
-            console.log(this.dataset.id + " + " + this.dataset.src);
-            if (counter < 1) {
-                counter++;
-                if (counter === 1) {
-                    localStorage.setItem("Player1", cards[i].dataset.id);
-                    localStorage.setItem("img1", cards[i].dataset.src);
+    cards[i].onclick = function () {
+      console.log(this.dataset.id + " + " + this.dataset.src);
+      if (counter < 1) {
+        counter++;
+        if (counter === 1) {
+          localStorage.setItem("Player1", cards[i].dataset.id);
+          localStorage.setItem("img1", cards[i].dataset.src);
 
-                    var player1 = localStorage.getItem("Player1");
-                    var img1 = localStorage.getItem("img1");
+          var player1 = localStorage.getItem("Player1");
+          var img1 = localStorage.getItem("img1");
 
-                    document.getElementById("headline2").textContent = "choose player 2";
+          document.getElementById("headline2").textContent = "choose player 2";
 
-                    document.getElementById("characterP1").innerHTML += `
+          document.getElementById("characterP1").innerHTML += `
                                                                       <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "/>
                                                                       <h2 class="player-name">Player 1</h2>
                                                                       <h3 class="playerTitle">${player1}</h3> `;
-                    playersBox.style.display = "block";
+          playersBox.style.display = "block";
 
-                    setTimeout(function () {
-                        playersBox.style.display = "none";
-                    }, 3500);
+          setTimeout(function () {
+            playersBox.style.display = "none";
+          }, 1500);
 
-                    if (cards[i].dataset.id === player1) {
-                        console.log(this.dataset.id + " the character is now taken");
-                        cards[i].innerHTML = "";
+          if (cards[i].dataset.id === player1) {
+            console.log(this.dataset.id + " the character is now taken");
+            cards[i].innerHTML = "";
 
-                        cards[i].classList.add(".newCard");
+            cards[i].classList.add(".newCard");
 
-                        var newText = document.createElement("newText");
-                        newText.classList.add("newText");
-                        cards[i].innerHTML = `<div class="newCard"> <h2 class="newText">This character is taken</h2> </div>`;
-                        cards[i].appendChild(newText);
+            var newText = document.createElement("newText");
+            newText.classList.add("newText");
+            cards[
+              i
+            ].innerHTML = `<div class="newCard"> <h2 class="newText">This character is taken</h2> </div>`;
+            cards[i].appendChild(newText);
 
-                        return;
-                    }
-                }
-            } else {
-                localStorage.setItem("Player2", cards[i].dataset.id);
-                localStorage.setItem("img2", cards[i].dataset.src);
+            return;
+          }
+        }
+      } else {
+        localStorage.setItem("Player2", cards[i].dataset.id);
+        localStorage.setItem("img2", cards[i].dataset.src);
 
-                var player2 = localStorage.getItem("Player2");
-                var img2 = localStorage.getItem("img2");
+        var player2 = localStorage.getItem("Player2");
+        var img2 = localStorage.getItem("img2");
 
-                document.getElementById("headline2").textContent = "Get ready to play!";
+        document.getElementById("headline2").textContent = "Get ready to play!";
 
-                document.getElementById("characterP2").innerHTML += `
+        document.getElementById("characterP2").innerHTML += `
                                                                     <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "/>
                                                                     <h3 class="player-name">Player 2</h3>
                                                                     <h3 class="playerTitle">${player2}</h3> `;
-                playersBox.style.display = "block";
+        playersBox.style.display = "block";
 
-                setTimeout(function () {
-                    playersBox.style.display = "none";
-                    window.location.replace("boardgame.html");
-                }, 3500);
-            }
-        };
-    }
+        setTimeout(function () {
+          playersBox.style.display = "none";
+          window.location.replace("boardgame.html");
+        }, 1500);
+      }
+    };
+  }
 }
 
 //display characters
@@ -79,14 +83,14 @@ var id;
 var src;
 
 function renderChar() {
-    container.innerHTML = "";
+  container.innerHTML = "";
 
-    charJson.forEach(function (character) {
-        id = character.id;
-        src = character.src;
-        //console.log(id);
+  charJson.forEach(function (character) {
+    id = character.id;
+    src = character.src;
+    //console.log(id);
 
-        container.innerHTML += `
+    container.innerHTML += `
                                 <div class="card">
                                     <div data-id="${id}" data-src="${src}"class="card-box"> 
                                     <img alt="${character.alt}" class="card-img" src="${src}"</img>
@@ -99,7 +103,7 @@ function renderChar() {
                                     <button class="red-btn" id="importantBtn" onclick="chosen()"> select </button>
                                 </div>
                             </div>`;
-    });
+  });
 }
 
 renderChar();
@@ -115,7 +119,7 @@ playerDisplay.innerHTML = "";
 
 //Close window if user clicks outside it
 window.addEventListener("click", function (event) {
-    if (event.target == playersBox) {
-        playersBox.style.display = "none";
-    }
+  if (event.target == playersBox) {
+    playersBox.style.display = "none";
+  }
 });

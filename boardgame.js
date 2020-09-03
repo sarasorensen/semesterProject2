@@ -35,8 +35,8 @@ let rolledDice = 1;
 button.addEventListener("click", function () {
   if (isGameActive) {
     dice.roll();
-    checkWinnerP1();
-    checkWinnerP2();
+    checkP1();
+    checkP2();
   }
   if (turn === 0) {
     doPlayer1();
@@ -53,12 +53,9 @@ const p1Display = document.getElementById("player1");
 function doPlayer1() {
   resultP1 = dice.roll();
 
-  console.log("resultP1", resultP1);
-
-  //Score display player 1
   scoreP1 = scoreP1 + resultP1;
-  moveTokens();
   player1Score.innerHTML = scoreP1;
+  moveTokens();
 
   if (resultP1 !== 6) {
     currentPlayer2.style.display = "block";
@@ -67,12 +64,48 @@ function doPlayer1() {
     turn = 1;
   } else {
     placeholder.innerHTML = `<p class="placeholderText"> Player 1 you rolled a ${resultP1}, go again</p>`;
-
-    //Player 1's turn display
-    currentPlayer1.style.display = "block";
-    currentPlayer2.style.display = "none";
     console.log("player 1 got a 6, go again");
   }
+
+  if (scoreP1 === scoreP2) {
+    console.log("can't share space, loose point p1");
+    scoreP1 = scoreP1 - 1;
+
+    player1Score.innerHTML = scoreP1;
+
+    trapBox.style.display = "block";
+    trapBox.innerHTML = "";
+    trapBox.innerHTML = `<div class="hidden">
+                        <p class="placeholderText">Oh no, Player 1, you can't share a tile with Player 2, you loose a point!</p>
+                        <img class="icon-char" alt="picture of player 1 character" src="${img1}"/></div>`;
+    setTimeout(function () {
+      trapBox.style.display = "none";
+
+      moveTokens();
+    }, 3500);
+
+    placeholder.innerHTML = "";
+    placeholder.innerHTML = `<p class="placeholderText">Player 1 you lost a point!</p>`;
+  }
+  trapProperties.forEach(function (property) {
+    if (traps.includes(scoreP1)) {
+      scoreP1 = scoreP1 - resultP1;
+
+      player1Score.innerHTML = scoreP1;
+
+      placeholder.innerHTML = `<p class="placeholderText">Player 1, you got a trap</p>`;
+
+      trapBox.style.display = "block";
+      trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 1, you got a trap!</p> 
+								<p>${property.text}</p>
+                                <img class="icon" alt="Player token" src="${property.image}"/>
+							</div>`;
+    }
+    setTimeout(function () {
+      trapBox.style.display = "none";
+      moveTokens();
+    }, 3500);
+  });
 }
 
 //Function for player 2
@@ -84,11 +117,9 @@ function doPlayer2() {
 
   console.log("resultP2", resultP2);
 
-  //Score display player 2
   scoreP2 = scoreP2 + resultP2;
-  moveTokens();
-
   player2Score.innerHTML = scoreP2;
+  moveTokens();
 
   if (resultP2 !== 6) {
     turn = 0;
@@ -97,10 +128,53 @@ function doPlayer2() {
     placeholder.innerHTML = `<p class="placeholderText">Player 2 you rolled a ${resultP2}</p>`;
   } else {
     placeholder.innerHTML = `<p class="placeholderText"> Player 2 you rolled a ${resultP2}, go again</p>`;
-
-    //Player 2's turn display
-    currentPlayer1.style.display = "none";
-    currentPlayer2.style.display = "block";
     console.log("player 2 got a 6, go again");
   }
+
+  if (scoreP2 === scoreP1) {
+    console.log("can't share space, take a point p2");
+
+    scoreP2 = scoreP2 - 1;
+    player2Score.innerHTML = scoreP2;
+
+    trapBox.style.display = "block";
+    trapBox.innerHTML = "";
+    trapBox.innerHTML = `<div class="hidden">
+                        <p class="placeholderText">Oh no, Player 2, you can't share a tile with Player 1, you loose a point!</p>
+                         <img class="icon-char" alt="picture of player 1 character" src="${img1}"/></div>`;
+    setTimeout(function () {
+      trapBox.style.display = "none";
+    }, 5500);
+    moveTokens();
+
+    placeholder.innerHTML = "";
+    placeholder.innerHTML = `<p class="placeholderText">Player 2 you lost a point!</p>`;
+  }
+
+  trapProperties.forEach(function (property) {
+    if (traps.includes(scoreP2)) {
+      scoreP2 = scoreP2 - resultP2;
+
+      player2Score.innerHTML = scoreP2;
+
+      placeholder.innerHTML = `<p class="placeholderText">Player 2, you got a trap</p>`;
+
+      trapBox.style.display = "block";
+      trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 2, you got a trap!</p> 
+								<p>${property.text}</p>
+                                <img class="icon" alt="Player token" src="${property.image}"/>
+							</div>`;
+    }
+    setTimeout(function () {
+      trapBox.style.display = "none";
+    }, 5500);
+    moveTokens();
+  });
 }
+
+//Close window if user clicks outside it
+window.addEventListener("click", function (event) {
+  if (event.target == playersBox) {
+    playersBox.style.display = "none";
+  }
+});
