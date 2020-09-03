@@ -78,33 +78,30 @@ function doPlayer1() {
     trapBox.innerHTML = `<div class="hidden">
                         <p class="placeholderText">Oh no, Player 1, you can't share a tile with Player 2, you loose a point!</p>
                         <img class="icon-char" alt="picture of player 1 character" src="${img1}"/></div>`;
-    setTimeout(function () {
-      trapBox.style.display = "none";
-
-      moveTokens();
-    }, 3500);
+    time();
+    moveTokens();
 
     placeholder.innerHTML = "";
     placeholder.innerHTML = `<p class="placeholderText">Player 1 you lost a point!</p>`;
   }
-  trapProperties.forEach(function (property) {
-    if (traps.includes(scoreP1)) {
+
+  traps.forEach(function (property) {
+    let trapNum = property.tile;
+    if (trapNum === scoreP1) {
       scoreP1 = scoreP1 - resultP1;
 
       player1Score.innerHTML = scoreP1;
 
-      placeholder.innerHTML = `<p class="placeholderText">Player 1, you got a trap</p>`;
+      placeholder.innerHTML = `<p class="placeholderText">Player 1, you get no points</p>`;
 
       trapBox.style.display = "block";
       trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 1, you got a trap!</p> 
 								<p>${property.text}</p>
                                 <img class="icon" alt="Player token" src="${property.image}"/>
-							</div>`;
+                            </div>`;
+      time();
     }
-    setTimeout(function () {
-      trapBox.style.display = "none";
-      moveTokens();
-    }, 3500);
+    moveTokens();
   });
 }
 
@@ -142,39 +139,42 @@ function doPlayer2() {
     trapBox.innerHTML = `<div class="hidden">
                         <p class="placeholderText">Oh no, Player 2, you can't share a tile with Player 1, you loose a point!</p>
                          <img class="icon-char" alt="picture of player 1 character" src="${img1}"/></div>`;
-    setTimeout(function () {
-      trapBox.style.display = "none";
-    }, 5500);
+    time();
     moveTokens();
 
     placeholder.innerHTML = "";
     placeholder.innerHTML = `<p class="placeholderText">Player 2 you lost a point!</p>`;
   }
 
-  trapProperties.forEach(function (property) {
-    if (traps.includes(scoreP2)) {
+  traps.forEach(function (property) {
+    let trapNum = property.tile;
+    if (trapNum === scoreP2) {
       scoreP2 = scoreP2 - resultP2;
 
       player2Score.innerHTML = scoreP2;
 
-      placeholder.innerHTML = `<p class="placeholderText">Player 2, you got a trap</p>`;
+      placeholder.innerHTML = `<p class="placeholderText">Player 2, you get no points</p>`;
 
       trapBox.style.display = "block";
       trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 2, you got a trap!</p> 
 								<p>${property.text}</p>
                                 <img class="icon" alt="Player token" src="${property.image}"/>
-							</div>`;
+                            </div>`;
+      time();
     }
-    setTimeout(function () {
-      trapBox.style.display = "none";
-    }, 5500);
+
     moveTokens();
   });
 }
-
 //Close window if user clicks outside it
 window.addEventListener("click", function (event) {
-  if (event.target == playersBox) {
-    playersBox.style.display = "none";
+  if (event.target == trapBox) {
+    trapBox.style.display = "none";
   }
 });
+
+function time() {
+  setTimeout(function () {
+    trapBox.style.display = "none";
+  }, 3500);
+}
