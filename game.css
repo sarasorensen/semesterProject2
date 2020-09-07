@@ -72,13 +72,11 @@
   display: none;
   text-transform: uppercase;
   color: #234b52;
-  margin-top: 1em;
 }
 .currentPlayer2 {
   display: none;
   text-transform: uppercase;
   color: #a94442;
-  margin-top: 1em;
 }
 .dice-box {
   width: 100%;
@@ -118,7 +116,7 @@
   height: 100px;
   text-align: center;
   padding: 0;
-  background-color: #f4f7f6;
+  background: linear-gradient(140deg, #e1e4e2 30%, #f4f7f6 50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 0.5em;
 }
@@ -136,12 +134,23 @@
   background-color: #000000a1;
 }
 .board-img {
-  width: 80%;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  width: 70%;
+  float: right;
+  margin-right: 15%;
+}
+.number {
+  text-transform: uppercase;
+  color: #234b52;
+  margin: 0;
+  margin-left: 0.2em;
+  float: left;
 }
 .icon {
   width: 50%;
+}
+.icon-char {
+  margin-top: 5%;
+  width: 40%;
 }
 .gameOverBox {
   display: none;

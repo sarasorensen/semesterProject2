@@ -1,0 +1,23 @@
+/*FOOTER-------------------------------------------------------------------------------------------*/
+footer {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #234b52;
+  color: #ffffff;
+  padding-bottom: 1em;
+}
+.logo-footer {
+  width: 15%;
+  margin-top: 1em;
+}
+.footer-column {
+  width: 100%;
+  text-align: center;
+}
+.copyright {
+  display: block;
+  margin: 0;
+  font-size: 0.5em;
+  font-weight: lighter;
+}

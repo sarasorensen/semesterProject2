@@ -39,29 +39,6 @@ h3 {
   font-size: 1em;
   font-weight: bold;
 }
-.white-btn {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  font-size: 1.2em;
-  padding: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin-top: 2em;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 0.3s ease-in-out 0s;
-}
-.white-btn:hover {
-  background-color: #234b52;
-  border-color: #234b52;
-  color: #ffffff;
-  transition: 0.3s ease-in-out 0s;
-}
-.white-btn:focus {
-  outline: none;
-}
 
 .blue-btn {
   background-color: #234b52;
@@ -105,10 +82,45 @@ h3 {
 .red-btn:focus {
   outline: none;
 }
+.important-btn {
+  background-color: teal;
+  color: #ffffff;
+  border: 1px solid teal;
+  font-size: 1em;
+  padding: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-top: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+.important-btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+.important-btn:focus {
+  outline: none;
+}
 
 /* HEADER-------------------------------------------------------------------------------------------*/
 header {
   width: 100%;
+}
+.horizontal_logo {
+  margin-top: 5%;
+  width: 50%;
+}
+.background {
+  width: 100%;
+  height: 75vh;
+  background-image: url(../images/offback.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
 }
 .logo-header {
   position: absolute;
@@ -118,21 +130,8 @@ header {
   margin-left: 2em;
 }
 /*CHARACTER PAGE-------------------------------------------------------------------------------------------*/
-.horizontal_logo {
-  width: 55%;
-}
-.background {
-  width: 100%;
-
-  background-image: url(../images/offback.png);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-wrap: wrap;
-}
 .wrapper {
-  background-color: #234b52;
+  background-color: #f4f7f6;
   padding-top: 2.5em;
   margin: 0;
   width: 100%;
@@ -152,27 +151,46 @@ header {
   margin-bottom: 1.5em;
 }
 .char-heading {
-  width: 20%;
-  margin-left: 3em;
-  color: #ffffff;
-  border-top: 3px solid #ffffff;
+  width: 90%;
+  margin-bottom: 5%;
   text-transform: uppercase;
+}
+.guideBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.card-info {
+  position: relative;
+  width: 30%;
+  margin-bottom: 10%;
+  background-color: #f4f7f6;
+  border: 1px solid #234b52;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.num {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #234b52;
+  color: #f4f7f6;
+  width: 15%;
+  margin-top: -10%;
+  margin-left: 42%;
+  margin-right: 42%;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
 }
 .char-container {
   text-align: center;
   width: 90%;
   margin: 5%;
-}
-.list-box {
-  display: inline-block;
-  text-align: left;
-}
-.list {
-  font-size: 1.3em;
-  padding: 0;
-  margin: auto;
-  list-style-position: inside;
-  text-align: left;
 }
 .char-row {
   width: 90%;
@@ -190,11 +208,10 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .card {
   position: relative;
   width: 30%;
-  margin: 1rem 0.25em;
+  margin-bottom: 10%;
   background-color: #f4f7f6;
   padding: 10px;
   text-align: center;
@@ -202,20 +219,21 @@ header {
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
-
+.colored-box {
+  width: 100%;
+  background-color: #234b52;
+  margin: 0;
+}
 .card-img {
   width: 60%;
-  margin-top: 5%;
-  background-color: transparent !important;
+  margin-top: -30%;
+  background-color: #f4f7f6;
+  border-radius: 50%;
+  padding: 1em;
 }
-
-.card-img,
 .card:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.05);
-  background-color: #ffffff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-
 .card-img-chosen {
   cursor: default;
   width: 60%;
@@ -223,12 +241,9 @@ header {
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
-
 .card-box {
   width: 90%;
   margin: 5%;
-  position: relative;
-  margin: 10px;
 }
 .title-box {
   height: 10%;
@@ -279,7 +294,7 @@ header {
   margin-right: auto;
   margin-top: 5%;
   width: 70%;
-  padding: 0.5em 2em 1em 2em;
+  padding: 1.5em 2em 1.5em 2em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -298,6 +313,7 @@ header {
   letter-spacing: 0.1em;
 }
 .headline2 {
+  font-weight: 100;
   color: #234b52;
   margin-top: 30%;
 }
@@ -315,16 +331,30 @@ header {
   border: 5px solid #234b52;
   border-top: 5px solid #d8d7d7;
   border-radius: 50%;
-  width: 0.5em;
-  height: 0.5em;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -335,66 +365,4 @@ header {
   color: #234b52;
   text-transform: uppercase;
   cursor: default;
-}
-
-/*FINALE PAGE-------------------------------------------------------------------------------------------*/
-canvas {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-  left: 0px;
-  right: 0px;
-  top: 0;
-}
-.fin-container {
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-}
-.finale-h2 {
-  font-family: "Playfair Display", serif;
-  text-transform: uppercase;
-}
-.col {
-  font-size: 1.3em;
-  width: 80%;
-  height: 100%;
-  margin-top: 15%;
-  margin-left: 10%;
-  text-align: left;
-}
-
-.col-img {
-  float: right;
-  width: 50%;
-  margin-left: 5%;
-  margin: 0;
-}
-.hidden-img {
-  display: none;
-}
-
-/*FOOTER-------------------------------------------------------------------------------------------*/
-footer {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #f4f7f6;
-  color: #000000;
-  padding-bottom: 1em;
-}
-.logo-footer {
-  width: 15%;
-  margin-top: 1em;
-}
-.footer-column {
-  width: 100%;
-  text-align: center;
-}
-.copyright {
-  display: block;
-  margin: 0;
-  font-size: 0.5em;
-  font-weight: lighter;
 }

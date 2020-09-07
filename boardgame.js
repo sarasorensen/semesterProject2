@@ -77,12 +77,12 @@ function doPlayer1() {
     trapBox.innerHTML = "";
     trapBox.innerHTML = `<div class="hidden">
                         <p class="placeholderText">Oh no, Player 1, you can't share a tile with Player 2, you loose a point!</p>
-                        <img class="icon-char" alt="picture of player 1 character" src="${img1}"/></div>`;
+                        <img class="icon-char" alt="picture of player 2 character" src="${img2}"/></div>`;
     time();
     moveTokens();
 
     placeholder.innerHTML = "";
-    placeholder.innerHTML = `<p class="placeholderText">Player 1 you lost a point!</p>`;
+    placeholder.innerHTML = `<p class="placeholderText">Player 1 you rolled a ${resultP1}, but lost one point</p>`;
   }
 
   traps.forEach(function (property) {
@@ -96,12 +96,13 @@ function doPlayer1() {
 
       trapBox.style.display = "block";
       trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 1, you got a trap!</p> 
-								<p>${property.text}</p>
-                                <img class="icon" alt="Player token" src="${property.image}"/>
+								            <p>${property.text}</p>
+                            <img class="icon" alt="Player token" src="${property.image}"/>
                             </div>`;
       time();
     }
     moveTokens();
+    checkP1();
   });
 }
 
@@ -143,7 +144,7 @@ function doPlayer2() {
     moveTokens();
 
     placeholder.innerHTML = "";
-    placeholder.innerHTML = `<p class="placeholderText">Player 2 you lost a point!</p>`;
+    placeholder.innerHTML = `<p class="placeholderText">Player 2 you rolled a ${resultP2}, but lost one point</p>`;
   }
 
   traps.forEach(function (property) {
@@ -164,6 +165,7 @@ function doPlayer2() {
     }
 
     moveTokens();
+    checkP2();
   });
 }
 //Close window if user clicks outside it

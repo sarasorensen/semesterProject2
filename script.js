@@ -3,7 +3,7 @@ let button = document.getElementById("button");
 
 button.addEventListener("click", function (event) {
   document
-    .getElementById("card-row")
+    .getElementById("wrapper")
     .scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   event.stopPropagation();
 });
@@ -22,8 +22,6 @@ function chosen() {
 
           var player1 = localStorage.getItem("Player1");
           var img1 = localStorage.getItem("img1");
-
-          document.getElementById("headline2").textContent = "choose player 2";
 
           document.getElementById("characterP1").innerHTML += `
                                                                       <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "/>
@@ -93,14 +91,15 @@ function renderChar() {
     container.innerHTML += `
                                 <div class="card">
                                     <div data-id="${id}" data-src="${src}"class="card-box"> 
+                                    <div class="colored-box">
                                     <img alt="${character.alt}" class="card-img" src="${src}"</img>
-
+                                    </div>
                                     <div class="title-box">
                                     <h2 class="title">${character.title}</h2>
                                     <p class="alias"> ${character.aliases}</p>
                                     <p class="description">This character is known for ${character.skills}</p>
                                     </div>
-                                    <button class="red-btn" id="importantBtn" onclick="chosen()"> select </button>
+                                    <button class="blue-btn" id="importantBtn" onclick="chosen()"> select </button>
                                 </div>
                             </div>`;
   });

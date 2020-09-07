@@ -1,7 +1,7 @@
 /*Media queries -------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 375px) {
   .char-container {
-    font-size: 0.5em;
+    margin-top: 15%;
   }
   .horizontal_logo {
     width: 100%;
@@ -37,6 +37,15 @@
   .card {
     width: 100%;
   }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 8%;
+  }
+  .card-info {
+    width: 100%;
+  }
   .hidden-content {
     font-size: 0.5em;
     margin-top: 50%;
@@ -49,6 +58,9 @@
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 480px) {
+  .char-container {
+    margin-top: 15%;
+  }
   .horizontal_logo {
     width: 100%;
     margin-top: 10%;
@@ -91,6 +103,19 @@
   .card {
     width: 100%;
   }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 10%;
+  }
+  .num {
+    margin-left: 45%;
+    width: 10%;
+  }
+  .card-info {
+    width: 100%;
+  }
   .hidden-content {
     font-size: 0.5em;
     margin-top: 50%;
@@ -103,12 +128,28 @@
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 595px) {
+  .char-container {
+    margin-top: 10%;
+  }
   .horizontal_logo {
     width: 100%;
     margin-top: 10%;
   }
   .card {
     width: 100%;
+  }
+  .card-info {
+    width: 100%;
+  }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 10%;
+  }
+  .num {
+    margin-left: 45%;
+    width: 10%;
   }
   .hidden-content {
     font-size: 0.8em;
@@ -149,6 +190,9 @@
   }
 }
 @media only screen and (min-width: 595px) and (max-width: 690px) {
+  .char-container {
+    margin-top: 5%;
+  }
   .horizontal_logo {
     width: 90%;
     margin-top: 10%;
@@ -177,6 +221,19 @@
   .card {
     width: 100%;
   }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 10%;
+  }
+  .num {
+    margin-left: 45%;
+    width: 10%;
+  }
+  .card-info {
+    width: 100%;
+  }
   .hidden-content {
     font-size: 0.8em;
     margin-top: 35%;
@@ -189,9 +246,12 @@
   }
 }
 @media only screen and (min-width: 690px) and (max-width: 800px) {
+  .char-container {
+    margin-top: 5%;
+  }
   .horizontal_logo {
     width: 80%;
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .col-img {
     display: none;
@@ -211,6 +271,9 @@
   .card {
     width: 45%;
   }
+  .card-info {
+    width: 45%;
+  }
   .hidden-content {
     font-size: 1em;
     margin-top: 20%;
@@ -223,6 +286,9 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .char-container {
+    margin-top: 10%;
+  }
   .col-img {
     display: none;
   }
@@ -241,6 +307,9 @@
   .card {
     width: 40%;
   }
+  .card-info {
+    width: 40%;
+  }
   .player-name {
     letter-spacing: 0em;
   }
@@ -252,6 +321,9 @@
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1320px) {
+  .char-container {
+    margin-top: 5%;
+  }
   .hidden-content {
     margin-top: 10%;
   }
