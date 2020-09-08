@@ -1,7 +1,11 @@
 /*Media queries -------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 375px) {
   .char-container {
-    margin-top: 15%;
+    margin-top: 20%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .horizontal_logo {
     width: 100%;
@@ -36,6 +40,7 @@
   }
   .card {
     width: 100%;
+    margin-top: 15%;
   }
   .guideBox {
     margin-bottom: 10%;
@@ -59,7 +64,11 @@
 }
 @media only screen and (min-width: 375px) and (max-width: 480px) {
   .char-container {
-    margin-top: 15%;
+    margin-top: 20%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .horizontal_logo {
     width: 100%;
@@ -102,6 +111,7 @@
   }
   .card {
     width: 100%;
+    margin-top: 15%;
   }
   .guideBox {
     margin-bottom: 10%;
@@ -129,7 +139,11 @@
 }
 @media only screen and (min-width: 480px) and (max-width: 595px) {
   .char-container {
-    margin-top: 10%;
+    margin-top: 20%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .horizontal_logo {
     width: 100%;
@@ -137,6 +151,7 @@
   }
   .card {
     width: 100%;
+    margin-top: 15%;
   }
   .card-info {
     width: 100%;
@@ -191,7 +206,11 @@
 }
 @media only screen and (min-width: 595px) and (max-width: 690px) {
   .char-container {
-    margin-top: 5%;
+    margin-top: 15%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .horizontal_logo {
     width: 90%;
@@ -220,6 +239,7 @@
   }
   .card {
     width: 100%;
+    margin-top: 15%;
   }
   .guideBox {
     margin-bottom: 10%;
@@ -247,7 +267,11 @@
 }
 @media only screen and (min-width: 690px) and (max-width: 800px) {
   .char-container {
-    margin-top: 5%;
+    margin-top: 15%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .horizontal_logo {
     width: 80%;
@@ -287,7 +311,11 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .char-container {
-    margin-top: 10%;
+    margin-top: 15%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .col-img {
     display: none;
@@ -322,7 +350,11 @@
 }
 @media only screen and (min-width: 1024px) and (max-width: 1320px) {
   .char-container {
-    margin-top: 5%;
+    margin-top: 7%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
   }
   .hidden-content {
     margin-top: 10%;

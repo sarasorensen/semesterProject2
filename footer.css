@@ -18,6 +18,7 @@ footer {
 .copyright {
   display: block;
   margin: 0;
+  margin-left: 44%;
   font-size: 0.5em;
   font-weight: lighter;
 }

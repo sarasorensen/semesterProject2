@@ -8,6 +8,7 @@
       content="Game of Banners is a free online board game, enjoy with friends and family today!"
     />
     <link rel="stylesheet" href="styles/stylesheet.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/media.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -18,41 +19,52 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" href="images/rel-icon.png" />
+    <link rel="icon" href="images/rel-icon.jp2" />
     <title>Game Of Banners - The Character Page</title>
   </head>
 
-  <body>
+  <body onload="clearStorage()">
     <header>
       <div class="background">
         <div class="char-container">
           <img
             class="horizontal_logo"
-            src="images/white-horizontal-logo.png"
+            src="images/white-horizontal-logo.jp2"
             alt="company logo Game Of Banners"
           />
           <div class="container">
             <p class="CTA">
-              Play against your friends for free, with no sign up needed!
+              Enjoy a game with your friends for free, where the last standing
+              banner wins!
             </p>
-            <div class="list-box">
-              <ol class="list">
-                <li>Choose 2 characters by clicking on their button.</li>
-                <li>Once selected, the game will automatically begin.</li>
-                <li>Good luck & Watch out for the traps!</li>
-              </ol>
-            </div>
           </div>
 
-          <button class="white-btn" type="button" id="button">Play now</button>
+          <button class="important-btn" type="button" id="button">
+            Play now
+          </button>
         </div>
       </div>
     </header>
 
-    <div class="wrapper">
-      <h1 class="char-heading">The characters</h1>
+    <div id="wrapper" class="wrapper">
+      <div class="guideBox">
+        <h1 class="char-heading">characters</h1>
+        <div class="card-info">
+          <div class="num">1</div>
+          <p>Choose 2 characters by clicking on their select button.</p>
+        </div>
 
-      <div class="char-row" id="card-row">
+        <div class="card-info">
+          <div class="num">2</div>
+          <p>Once selected, the game will automatically begin.</p>
+        </div>
+        <div class="card-info">
+          <div class="num">3</div>
+          <p>Good luck & Watch out for the hidden traps!</p>
+        </div>
+      </div>
+
+      <div class="char-row">
         <div class="char-column" id="cards">
           <div class="card"></div>
         </div>
@@ -80,7 +92,7 @@
         <a href="index.html">
           <img
             class="logo-footer"
-            src="images/horizontal_logo.png"
+            src="images/white-horizontal-logo.jp2"
             alt="Game Of Banners Logo"
         /></a>
       </div>

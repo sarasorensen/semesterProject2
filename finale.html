@@ -9,6 +9,8 @@
     />
     <link rel="stylesheet" href="styles/stylesheet.css" />
     <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/finale.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/media.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -19,18 +21,25 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" href="images/rel-icon.png" />
+    <link rel="icon" href="images/rel-icon.jp2" />
     <title>Game Of Banners - The Finale Page</title>
   </head>
 
   <body>
+
+    <canvas id="canvas"
+    >Your browser does not support canvas, please update it.</canvas
+  >
+
+
+
     <div class="fin-container">
       <header>
         <nav class="navbar" id="navbar">
           <a class="logo-header-a" href="index.html"
             ><img
               class="logo-header"
-              src="images/main-logo@200x-8.png"
+              src="images/banner.jp2"
               alt="company logo Game Of Banners"
           /></a>
 
@@ -39,20 +48,18 @@
           </ul>
         </nav>
       </header>
-      <canvas id="canvas"
-        >Your browser does not support canvas, please update it.</canvas
-      >
+   
 
       <div class="col"> 
          <img
         class="col-img"
-        src="images/winner2_1.png"
+        src="images/winner.jp2"
         alt="company logo Game Of Banners"
       />
         <article>
-          <h1>Congratulations</h1>
+          <h1 class="finale-h1">The big winner reveal</h1>
           <h2 class="finale-h2" id="winner"></h2>
-          <p>Celebrate with some fun confetti, or play again.</p>
+          <p>Celebrate with some fun snow confetti, or play again.</p>
 
           <div class="btn-group">
           <button type="button" id="confettiBtn" class="red-btn">
@@ -61,12 +68,15 @@
 
           <button onclick ="redirect()"  href="index.html" class="blue-btn">Play Again</button>
         </div>
+
         </article>
+
+ 
 
       <div class="hidden-img">
         <img
       class="img-hidden"
-        src="images/winner2_1.png"
+        src="images/winner.jp2"
         alt="company logo Game Of Banners"
       />
       </div>
@@ -79,7 +89,7 @@
         <a href="index.html">
           <img
             class="logo-footer"
-            src="images/horizontal_logo.png"
+            src="images/white-horizontal-logo.jp2"
             alt="Game Of Banners Logo"
         /></a>
       </div>

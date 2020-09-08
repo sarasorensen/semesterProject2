@@ -16,6 +16,7 @@ function redirect() {
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
@@ -72,7 +73,7 @@ function update() {
 
   lastUpdated = now;
 
-  setTimeout(update, 1);
+  setTimeout(update, 10);
 }
 
 function confetti() {
@@ -88,7 +89,6 @@ function confetti() {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
   confettis.forEach(function (confPiece) {
     ctx.save();
     ctx.beginPath();
@@ -100,8 +100,8 @@ function draw() {
       confPiece.rotation * Math.PI
     );
     ctx.lineTo(confPiece.x, confPiece.y);
-    ctx.closePath();
     ctx.fillStyle = confPiece.color;
+    ctx.closePath();
     ctx.fill();
     ctx.restore();
   });

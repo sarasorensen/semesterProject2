@@ -1,3 +1,10 @@
+function clear() {
+  window.location = "index.html";
+  localStorage.clear();
+}
+function clearStorage() {
+  localStorage.clear();
+}
 //scroll to characters
 let button = document.getElementById("button");
 
@@ -91,15 +98,15 @@ function renderChar() {
     container.innerHTML += `
                                 <div class="card">
                                     <div data-id="${id}" data-src="${src}"class="card-box"> 
-                                    <div class="colored-box">
                                     <img alt="${character.alt}" class="card-img" src="${src}"</img>
-                                    </div>
+                                    
                                     <div class="title-box">
                                     <h2 class="title">${character.title}</h2>
                                     <p class="alias"> ${character.aliases}</p>
                                     <p class="description">This character is known for ${character.skills}</p>
                                     </div>
-                                    <button class="blue-btn" id="importantBtn" onclick="chosen()"> select </button>
+                                   
+                                    <button type="button" class="selectBtn blue-btn" onclick="chosen()"> select </button>
                                 </div>
                             </div>`;
   });
@@ -108,7 +115,7 @@ function renderChar() {
 renderChar();
 
 const cards = document.querySelectorAll(".card > div");
-const btn = document.getElementById("importantBtn");
+const btn = document.querySelectorAll("selectBtn");
 
 const playersBox = document.getElementById("players-box");
 let playerDisplay = document.querySelectorAll("player-col");

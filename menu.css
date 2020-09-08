@@ -10,7 +10,7 @@ li {
   margin-left: 2%;
   font-family: "Nunito", sans-serif;
   float: left;
-  padding: 1.5vw;
+  padding: 1em;
   text-transform: uppercase;
 }
 ul.menubar > li:last-of-type {
@@ -28,7 +28,7 @@ ul.menubar > li:last-of-type {
 .menubar a {
   text-align: center;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.25rem;
   color: #ffffff;
   padding-left: 0px;
 }

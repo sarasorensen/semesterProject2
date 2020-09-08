@@ -6,45 +6,46 @@ f0f0f0 grey
 */
 html {
   height: 100%;
+  font-size: 100%;
 }
 body {
   width: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f7f6;
+  background-color: #f0f0f0;
   color: #000000;
   line-height: 1.5;
   margin: 0;
 }
 a {
   text-decoration: none;
-  color: #000000;
+  color: #234b52;
 }
 p {
-  font-size: 1em;
-  line-height: 20pt;
+  font-size: 1.25rem;
+  max-width: 33em;
 }
 h1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5em;
+  font-size: 3rem;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
 }
 h3 {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .blue-btn {
   background-color: #234b52;
   color: #ffffff;
   border: 1px solid #234b52;
-  font-size: 1em;
+  font-size: 1.25rem;
   padding: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
@@ -65,7 +66,7 @@ h3 {
   background-color: #a94442;
   color: #ffffff;
   border: 1px solid #a94442;
-  font-size: 1em;
+  font-size: 1.25rem;
   padding: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
@@ -83,10 +84,10 @@ h3 {
   outline: none;
 }
 .important-btn {
-  background-color: teal;
-  color: #ffffff;
-  border: 1px solid teal;
-  font-size: 1em;
+  background: #ffffff;
+  color: #234b52;
+  border: 1px solid #ffffff;
+  font-size: 1.25rem;
   padding: 1em;
   padding-left: 3em;
   padding-right: 3em;
@@ -94,11 +95,11 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s ease-in-out 0s;
+  transition: 0.2s ease-in-out 0s;
 }
 .important-btn:hover {
-  background-color: transparent;
-  color: #ffffff;
+  background: #cfcece;
+  border: 1px solid #cfcece;
 }
 .important-btn:focus {
   outline: none;
@@ -115,12 +116,13 @@ header {
 .background {
   width: 100%;
   height: 75vh;
-  background-image: url(../images/offback.png);
+  background-image: url(../images/offHead.jp2);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 .logo-header {
   position: absolute;
@@ -131,31 +133,33 @@ header {
 }
 /*CHARACTER PAGE-------------------------------------------------------------------------------------------*/
 .wrapper {
-  background-color: #f4f7f6;
-  padding-top: 2.5em;
-  margin: 0;
+  margin-top: 2.5em;
   width: 100%;
 }
 .CTA {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
-  margin-top: 0;
+  text-align: center;
+  margin-top: 1em;
+  margin-left: 10%;
   color: #ffffff;
 }
 .container {
   z-index: 1;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  width: 50%;
+  margin-left: 25%;
   color: #ffffff;
   background-color: transparent;
   margin-bottom: 1.5em;
 }
 .char-heading {
-  width: 90%;
+  width: 100%;
   margin-bottom: 5%;
+  text-align: center;
   text-transform: uppercase;
 }
 .guideBox {
+  color: #234b52;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -168,24 +172,21 @@ header {
   width: 30%;
   margin-bottom: 10%;
   background-color: #f4f7f6;
-  border: 1px solid #234b52;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 .num {
-  border-radius: 50%;
-  text-align: center;
   background-color: #234b52;
   color: #f4f7f6;
-  width: 15%;
-  margin-top: -10%;
-  margin-left: 42%;
-  margin-right: 42%;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  margin-top: -8%;
+  margin-left: 45%;
 }
 .char-container {
   text-align: center;
@@ -213,29 +214,25 @@ header {
   width: 30%;
   margin-bottom: 10%;
   background-color: #f4f7f6;
-  padding: 10px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
-.colored-box {
-  width: 100%;
-  background-color: #234b52;
-  margin: 0;
-}
+
 .card-img {
-  width: 60%;
+  width: 50%;
   margin-top: -30%;
   background-color: #f4f7f6;
   border-radius: 50%;
-  padding: 1em;
+  padding: 0.5em;
 }
 .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .card-img-chosen {
   cursor: default;
+  border-radius: 50%;
   width: 60%;
   margin-top: 5%;
   -webkit-transition: ease-in-out 0.5s;
@@ -248,22 +245,20 @@ header {
 .title-box {
   height: 10%;
   width: 100%;
-  text-align: center;
 }
+
 .card:hover .title-box {
   opacity: 1;
 }
 .title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.3em;
-  letter-spacing: 0.1em;
   margin-bottom: 0;
 }
 .alias {
   margin-top: 0;
 }
 .description {
-  color: #666464;
+  color: #4e4c4c;
+  text-align: center;
 }
 .row:after {
   content: "";
@@ -331,8 +326,8 @@ header {
   border: 5px solid #234b52;
   border-top: 5px solid #d8d7d7;
   border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 1em;
+  height: 1em;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }

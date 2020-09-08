@@ -10,9 +10,8 @@
   margin-top: 10%;
   width: 35%;
   color: #000000;
-  text-align: left;
   background-color: #f4f7f6;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: ease-in-out 0.5s;
@@ -23,7 +22,7 @@
   color: #000000;
 }
 .game {
-  font-size: 2em;
+  margin: 1em;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
@@ -32,7 +31,7 @@
   background-color: #234b52;
   color: #ffffff;
   border: 1px solid #234b52;
-  font-size: 1em;
+  font-size: 1.25rem;
   margin-bottom: 1em;
   margin-top: 0.5em;
   padding: 0.5em;
@@ -54,35 +53,37 @@
   display: inline-block;
   width: 35%;
   margin: 2em;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 .player-game__img {
   float: left;
+
   width: 35%;
 }
 .playerId {
   margin: 0;
-  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
 }
-.playerScore {
-  text-transform: uppercase;
+.player1Score {
+  font-weight: bolder;
+}
+.player2Score {
+  font-weight: bolder;
 }
 
 .currentPlayer1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
   display: none;
-  text-transform: uppercase;
+  font-weight: bolder;
   color: #234b52;
 }
 .currentPlayer2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
   display: none;
-  text-transform: uppercase;
+  font-weight: bolder;
   color: #a94442;
-}
-.dice-box {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
 }
 
 .placeholder {
@@ -90,38 +91,46 @@
   margin: auto;
   margin-top: 0;
   margin-bottom: 0.5em;
-  font-size: 1em;
   color: #000000;
-  text-transform: uppercase;
 }
 .placeholderText {
   margin: 0;
+  margin-left: 5%;
 }
 .container-boardgame {
   float: right;
   width: 50%;
-  margin-top: 7%;
+  margin-top: -50%;
   margin-right: 5%;
 }
 .board-game {
   padding: 0;
-  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  color: #000000;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  transition: 0.3s ease-in-out 0s;
 }
-
 .game-card {
-  width: 100px;
-  height: 100px;
+  background-image: linear-gradient(to bottom right, #326972, #234b52);
+  margin: 0.5em;
+  width: 150px;
+  height: 150px;
   text-align: center;
   padding: 0;
-  background: linear-gradient(140deg, #e1e4e2 30%, #f4f7f6 50%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 0.5em;
+}
+.card-img-chosen {
+  border-radius: 50%;
 }
 .trapBox {
   display: none;
+  text-transform: initial;
   cursor: default;
   position: fixed;
   z-index: 1;
@@ -135,22 +144,32 @@
 }
 .board-img {
   width: 70%;
-  float: right;
-  margin-right: 15%;
+  border-radius: 50%;
+  margin-top: -60%;
+  margin-right: 5%;
+  transition: 0.3s ease-in-out;
+}
+.board-icon {
+  width: 100%;
+  margin-top: 15%;
+  margin-right: 5%;
+  transition: 0.3s ease-in-out;
 }
 .number {
+  text-align: center;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  color: #234b52;
-  margin: 0;
-  margin-left: 0.2em;
-  float: left;
+  color: #ffffff;
+  margin-top: 40%;
 }
 .icon {
-  width: 50%;
+  width: 30%;
+  margin-right: 20%;
 }
 .icon-char {
-  margin-top: 5%;
-  width: 40%;
+  width: 20%;
+  border-radius: 50%;
+  margin-right: 20%;
 }
 .gameOverBox {
   display: none;
@@ -173,9 +192,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
-  width: 70%;
+  margin-top: 15%;
+  width: 50%;
   padding: 0.5em 2em 1em 2em;
   text-align: center;
-  font-size: 2em;
+}
+.hiddenText {
+  margin-left: 15%;
 }

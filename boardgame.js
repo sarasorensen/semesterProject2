@@ -76,13 +76,17 @@ function doPlayer1() {
     trapBox.style.display = "block";
     trapBox.innerHTML = "";
     trapBox.innerHTML = `<div class="hidden">
-                        <p class="placeholderText">Oh no, Player 1, you can't share a tile with Player 2, you loose a point!</p>
-                        <img class="icon-char" alt="picture of player 2 character" src="${img2}"/></div>`;
+                        <div class="hiddenText">
+                          <p>Player 1, you can't share a tile with Player 2.</p> 
+                          <p>You loose a point.</p>
+                        <img class="icon-char" alt="picture of player 2 character" src="${img2}"/>
+                        </div>
+                        </div>`;
     time();
     moveTokens();
 
     placeholder.innerHTML = "";
-    placeholder.innerHTML = `<p class="placeholderText">Player 1 you rolled a ${resultP1}, but lost one point</p>`;
+    placeholder.innerHTML = `<p class="placeholderText">Player 1 you rolled a ${resultP1}, but lost one point.</p>`;
   }
 
   traps.forEach(function (property) {
@@ -92,12 +96,14 @@ function doPlayer1() {
 
       player1Score.innerHTML = scoreP1;
 
-      placeholder.innerHTML = `<p class="placeholderText">Player 1, you get no points</p>`;
+      placeholder.innerHTML = `<p class="placeholderText">Player 1 you rolled a ${resultP1}, but you got a trap.</p>`;
 
       trapBox.style.display = "block";
-      trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 1, you got a trap!</p> 
+      trapBox.innerHTML = `<div class="hidden"> 
+                          <div class="hiddenText">
 								            <p>${property.text}</p>
                             <img class="icon" alt="Player token" src="${property.image}"/>
+                            </div>
                             </div>`;
       time();
     }
@@ -138,13 +144,17 @@ function doPlayer2() {
     trapBox.style.display = "block";
     trapBox.innerHTML = "";
     trapBox.innerHTML = `<div class="hidden">
-                        <p class="placeholderText">Oh no, Player 2, you can't share a tile with Player 1, you loose a point!</p>
-                         <img class="icon-char" alt="picture of player 1 character" src="${img1}"/></div>`;
+                          <div class="hiddenText">
+                         <p>Player 2, you can't share a tile with Player 1.</p>
+                          <p>You loose a point.</p>
+                         <img class="icon-char" alt="picture of player 1 character" src="${img1}"/>
+                         </div>
+                         </div>`;
     time();
     moveTokens();
 
     placeholder.innerHTML = "";
-    placeholder.innerHTML = `<p class="placeholderText">Player 2 you rolled a ${resultP2}, but lost one point</p>`;
+    placeholder.innerHTML = `<p class="placeholderText">Player 2 you rolled a ${resultP2}, but lost one point.</p>`;
   }
 
   traps.forEach(function (property) {
@@ -154,16 +164,17 @@ function doPlayer2() {
 
       player2Score.innerHTML = scoreP2;
 
-      placeholder.innerHTML = `<p class="placeholderText">Player 2, you get no points</p>`;
+      placeholder.innerHTML = `<p class="placeholderText">Player 2 you rolled a ${resultP2}, but you got a trap.</p>`;
 
       trapBox.style.display = "block";
-      trapBox.innerHTML = `<div class="hidden"> <p class="placeholderText">Oh no, Player 2, you got a trap!</p> 
-								<p>${property.text}</p>
+      trapBox.innerHTML = `<div class="hidden"> 
+                          <div class="hiddenText">
+								                <p>${property.text}</p>
                                 <img class="icon" alt="Player token" src="${property.image}"/>
+                            </div>
                             </div>`;
       time();
     }
-
     moveTokens();
     checkP2();
   });
