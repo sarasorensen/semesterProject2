@@ -5,7 +5,7 @@ function clear() {
 function clearStorage() {
   localStorage.clear();
 }
-//scroll to characters
+
 let button = document.getElementById("button");
 
 button.addEventListener("click", function (event) {
@@ -67,7 +67,7 @@ function chosen() {
 
         document.getElementById("characterP2").innerHTML += `
                                                                     <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "/>
-                                                                    <h3 class="player-name">Player 2</h3>
+                                                                    <h2 class="player-name">Player 2</h2>
                                                                     <h3 class="playerTitle">${player2}</h3> `;
         playersBox.style.display = "block";
 
@@ -80,7 +80,6 @@ function chosen() {
   }
 }
 
-//display characters
 var container = document.querySelector("#cards");
 
 container.innerHTML = "";
@@ -93,7 +92,6 @@ function renderChar() {
   charJson.forEach(function (character) {
     id = character.id;
     src = character.src;
-    //console.log(id);
 
     container.innerHTML += `
                                 <div class="card">
@@ -106,7 +104,7 @@ function renderChar() {
                                     <p class="description">This character is known for ${character.skills}</p>
                                     </div>
                                    
-                                    <button type="button" class="selectBtn blue-btn" onclick="chosen()"> select </button>
+                                    <button type="button" class="selectBtn red-btn" onclick="chosen()"> select </button>
                                 </div>
                             </div>`;
   });
@@ -123,7 +121,6 @@ let counter = 0;
 
 playerDisplay.innerHTML = "";
 
-//Close window if user clicks outside it
 window.addEventListener("click", function (event) {
   if (event.target == playersBox) {
     playersBox.style.display = "none";

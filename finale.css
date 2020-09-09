@@ -23,16 +23,16 @@ canvas {
 .col {
   text-align: left;
   font-size: 1.3em;
-  width: 80%;
+  width: 60%;
   height: 100%;
   margin-top: 15%;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 .col-img {
   float: right;
   width: 50%;
-  margin-left: 5%;
+  margin-left: 10%;
   margin: 0;
 }
 .hidden-img {

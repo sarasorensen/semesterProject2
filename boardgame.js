@@ -29,7 +29,6 @@ const placeholder = document.getElementById("placeholder");
 
 let isGameActive = true;
 let turn = 0;
-let rolledDice = 1;
 
 //function for which player
 button.addEventListener("click", function () {
@@ -82,6 +81,7 @@ function doPlayer1() {
                         <img class="icon-char" alt="picture of player 2 character" src="${img2}"/>
                         </div>
                         </div>`;
+
     time();
     moveTokens();
 

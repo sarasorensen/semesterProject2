@@ -95,7 +95,6 @@
 }
 .placeholderText {
   margin: 0;
-  margin-left: 5%;
 }
 .container-boardgame {
   float: right;
@@ -126,7 +125,12 @@
   padding: 0;
 }
 .card-img-chosen {
+  cursor: default;
   border-radius: 50%;
+  width: 60%;
+  margin-top: 5%;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 .trapBox {
   display: none;
@@ -164,12 +168,10 @@
 }
 .icon {
   width: 30%;
-  margin-right: 20%;
 }
 .icon-char {
   width: 20%;
   border-radius: 50%;
-  margin-right: 20%;
 }
 .gameOverBox {
   display: none;
@@ -197,6 +199,6 @@
   padding: 0.5em 2em 1em 2em;
   text-align: center;
 }
-.hiddenText {
-  margin-left: 15%;
+.spin-col {
+  width: 100%;
 }

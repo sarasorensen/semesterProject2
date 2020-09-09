@@ -1,7 +1,27 @@
-/*Media queries -------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 375px) {
+  .logo-header {
+    width: 20%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .CTA {
+    font-size: 1rem;
+  }
+  .player-col {
+    width: 100%;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
   .char-container {
-    margin-top: 20%;
+    margin-top: 60%;
   }
   .container {
     width: 100%;
@@ -12,8 +32,8 @@
     margin-top: 10%;
   }
   .col {
-    font-size: 1em;
     width: 90%;
+    margin-top: 35%;
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -31,6 +51,7 @@
     display: block;
     width: 90%;
     margin: 5%;
+    margin-top: 20%;
   }
   .img-hidden {
     display: block;
@@ -51,20 +72,54 @@
   .card-info {
     width: 100%;
   }
+  .info-col {
+    width: 100%;
+    margin-bottom: 10%;
+  }
   .hidden-content {
     font-size: 0.5em;
-    margin-top: 50%;
+    margin-top: 10%;
   }
   footer {
     margin-top: 5%;
   }
+  .copyright {
+    font-size: 0.8rem;
+  }
   .logo-footer {
-    width: 20%;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 480px) {
+  .logo-header {
+    width: 20%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .CTA {
+    font-size: 1rem;
+  }
+  .player-col {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .info-col {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
   .char-container {
-    margin-top: 20%;
+    margin-top: 60%;
   }
   .container {
     width: 100%;
@@ -74,34 +129,20 @@
     width: 100%;
     margin-top: 10%;
   }
-  .btn-group button {
-    margin-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: block;
-  }
-
   .col {
-    font-size: 1em;
     width: 90%;
+    margin-top: 35%;
     margin-left: 5%;
     margin-right: 5%;
   }
   .col-img {
     display: none;
   }
-  .btn-group button {
-    margin-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: block;
-  }
   .hidden-img {
     display: block;
     width: 90%;
     margin: 5%;
+    margin-top: 20%;
   }
   .img-hidden {
     display: block;
@@ -128,18 +169,31 @@
   }
   .hidden-content {
     font-size: 0.5em;
-    margin-top: 50%;
+    margin-top: 10%;
   }
   footer {
     margin-top: 5%;
   }
   .logo-footer {
-    width: 20%;
+    width: 70%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 595px) {
+  .logo-header {
+    width: 15%;
+  }
+  .player-col {
+    width: 90%;
+  }
+  .info-col {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
   .char-container {
-    margin-top: 20%;
+    margin-top: 50%;
   }
   .container {
     width: 100%;
@@ -168,28 +222,22 @@
   }
   .hidden-content {
     font-size: 0.8em;
-    margin-top: 40%;
+    margin-top: 30%;
   }
   .col {
-    font-size: 1em;
     width: 90%;
+    margin-top: 30%;
     margin-left: 5%;
     margin-right: 5%;
   }
   .col-img {
     display: none;
   }
-  .btn-group button {
-    margin-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: block;
-  }
   .hidden-img {
     display: block;
     width: 90%;
     margin: 5%;
+    margin-top: 10%;
   }
   .img-hidden {
     display: block;
@@ -197,16 +245,37 @@
     margin-right: auto;
     width: 100%;
   }
+  .hidden-content {
+    font-size: 0.5em;
+    margin-top: 10%;
+  }
   footer {
     margin-top: 5%;
   }
   .logo-footer {
-    width: 20%;
+    width: 50%;
+  }
+  .copyright {
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 595px) and (max-width: 690px) {
+  .logo-header {
+    width: 15%;
+  }
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
   .char-container {
-    margin-top: 15%;
+    margin-top: 40%;
   }
   .container {
     width: 100%;
@@ -219,12 +288,8 @@
   .col-img {
     display: none;
   }
-  .btn-group button {
-    margin-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: block;
+  .col {
+    margin-top: 30%;
   }
   .hidden-img {
     display: block;
@@ -236,6 +301,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    margin-top: 10%;
   }
   .card {
     width: 100%;
@@ -258,16 +324,34 @@
     font-size: 0.8em;
     margin-top: 35%;
   }
+  .hidden-content {
+    font-size: 0.5em;
+    margin-top: 10%;
+  }
   footer {
     margin-top: 5%;
   }
   .logo-footer {
-    width: 30%;
+    width: 50%;
   }
 }
 @media only screen and (min-width: 690px) and (max-width: 800px) {
+  .logo-header {
+    width: 15%;
+  }
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
   .char-container {
-    margin-top: 15%;
+    margin-top: 35%;
   }
   .container {
     width: 100%;
@@ -280,7 +364,9 @@
   .col-img {
     display: none;
   }
-
+  .col {
+    margin-top: 30%;
+  }
   .hidden-img {
     display: block;
     width: 90%;
@@ -291,27 +377,40 @@
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    margin-top: 10%;
   }
   .card {
     width: 45%;
+    margin-top: 5%;
   }
   .card-info {
     width: 45%;
   }
   .hidden-content {
-    font-size: 1em;
-    margin-top: 20%;
+    font-size: 0.5em;
+    margin-top: 10%;
   }
   footer {
     margin-top: 5%;
   }
   .logo-footer {
-    width: 20%;
+    width: 50%;
+  }
+  .copyright {
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
   .char-container {
-    margin-top: 15%;
+    margin-top: 25%;
   }
   .container {
     width: 100%;
@@ -320,7 +419,6 @@
   .col-img {
     display: none;
   }
-
   .hidden-img {
     display: block;
     width: 90%;
@@ -331,6 +429,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    margin-top: 10%;
   }
   .card {
     width: 40%;
@@ -339,7 +438,7 @@
     width: 40%;
   }
   .player-name {
-    letter-spacing: 0em;
+    letter-spacing: 0;
   }
   .hidden-content {
     margin-top: 15%;
@@ -347,10 +446,25 @@
   footer {
     margin-top: 5%;
   }
+  .logo-footer {
+    width: 40%;
+  }
+  .copyright {
+    font-size: 1em;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1320px) {
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
   .char-container {
-    margin-top: 7%;
+    margin-top: 15%;
+    margin-left: 5%;
   }
   .container {
     width: 100%;
@@ -362,7 +476,25 @@
   .col-img {
     display: none;
   }
-
+  .hidden-img {
+    display: block;
+    width: 90%;
+    margin: 5%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1320px) and (max-width: 1500) {
+  .col {
+    width: 100%;
+  }
+  .col-img {
+    display: none;
+  }
   .hidden-img {
     display: block;
     width: 90%;
