@@ -1,20 +1,22 @@
 /*GAME BOARD PAGE-------------------------------------------------------------------------------------------*/
 .game-wrapper {
   background-color: #d8d7d7;
+  padding-bottom: 10%;
 }
 
 .sidebar {
   display: inline-block;
-  margin-left: 1em;
+  margin-left: 10%;
   margin-bottom: 10%;
-  margin-top: 8%;
-  width: 25%;
+  margin-top: 5%;
+  width: 30%;
   color: #000000;
   background-color: #f4f7f6;
   padding: 5px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
 .info-box {
@@ -23,6 +25,7 @@
 }
 .game {
   margin: 1em;
+  font-size: 2.5rem;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
@@ -46,9 +49,6 @@
   background-color: transparent;
   color: #234b52;
 }
-.blue-btn__game:focus {
-  outline: none;
-}
 .sidebar-box {
   display: inline-block;
   width: 35%;
@@ -57,7 +57,6 @@
 }
 .player-game__img {
   float: left;
-
   width: 35%;
 }
 .playerId {
@@ -70,7 +69,6 @@
 .player2Score {
   font-weight: bolder;
 }
-
 .currentPlayer1 {
   font-family: "Open Sans", sans-serif;
   font-size: 1.25rem;
@@ -85,7 +83,6 @@
   font-weight: bolder;
   color: #a94442;
 }
-
 .placeholder {
   border: 1px solid transparent;
   margin: auto;
@@ -98,21 +95,31 @@
 }
 .container-boardgame {
   float: right;
-  width: 70%;
-  margin-top: -49%;
-  margin-right: 2em;
+  width: 900px;
+  max-width: 900px;
+  margin-left: 3em;
+  margin-right: 3em;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  right: 0;
 }
-
 .board-game {
   width: 100%;
+  max-width: 100%;
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 0;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -120,8 +127,8 @@
 }
 .game-card {
   margin: 0.5em;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   color: white;
   text-align: center;
   padding: 0;
@@ -129,8 +136,13 @@
 .card-row {
   width: 100%;
   display: flex;
+  flex-grow: 0;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -139,8 +151,13 @@
 .card-row2 {
   width: 100%;
   display: flex;
+  flex-grow: 0;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
@@ -149,65 +166,68 @@
 .card-row3 {
   width: 100%;
   display: flex;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: -44%;
-  margin-left: 1%;
-}
-.card-row4 {
-  width: 100%;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: -33%;
-  margin-left: 45%;
 }
 .card-column {
+  width: 100%;
   display: flex;
-  margin-left: 89%;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  align-items: flex-end !important;
+  align-items: flex-end;
+}
+.card-column .game-card {
+  margin: 0.5em;
+  width: 80px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding: 0;
 }
 .card-column2 {
   display: flex;
+  flex-grow: 0;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  align-items: flex-start;
-  margin-top: -44%;
-  height: 50%;
-  margin-left: 1%;
-}
-.card-column3 {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: -33%;
-  margin-left: 34%;
+}
+.card-column2 .game-card {
+  margin: 0.5em;
+  width: 80px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding: 0;
 }
 .card-img-chosen {
   cursor: default;
   border-radius: 50%;
   width: 60%;
   margin-top: 5%;
+  -moz-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
@@ -228,7 +248,8 @@
 .board-img {
   width: 70%;
   border-radius: 50%;
-  margin-top: -60%;
+  margin-top: -70%;
+  margin-bottom: 50%;
   margin-right: 5%;
   transition: 0.3s ease-in-out;
 }
@@ -239,8 +260,8 @@
   transition: 0.3s ease-in-out;
 }
 .board-logo {
-  width: 90%;
-  margin-top: 40%;
+  width: 80%;
+  margin-top: 25%;
   transition: 0.3s ease-in-out;
 }
 .number {

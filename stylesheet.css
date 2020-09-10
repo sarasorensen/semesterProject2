@@ -50,9 +50,6 @@ h3 {
   background-color: transparent;
   color: #234b52;
 }
-.blue-btn:focus {
-  outline: none;
-}
 .red-btn {
   background-color: #a94442;
   color: #ffffff;
@@ -71,17 +68,14 @@ h3 {
   background-color: transparent;
   color: #a94442;
 }
-.red-btn:focus {
-  outline: none;
-}
 .important-btn {
   background: #ffffff;
   color: #234b52;
   border: 1px solid #ffffff;
   font-size: 1.25rem;
-  padding: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   margin-top: 2em;
   text-align: center;
   text-transform: uppercase;
@@ -91,9 +85,6 @@ h3 {
 .important-btn:hover {
   background: #cfcece;
   border: 1px solid #cfcece;
-}
-.important-btn:focus {
-  outline: none;
 }
 /*header and menu*/
 ul {
@@ -143,7 +134,7 @@ header {
 .background {
   width: 100%;
   height: 75vh;
-  background-image: url(../images/offHead.jp2);
+  background-image: url(../images/offHead.jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -165,6 +156,7 @@ header {
   border-radius: 50%;
   width: 1.5em;
   height: 1.5em;
+  -moz-animation: spin 2s linear infinite;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }

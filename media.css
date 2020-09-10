@@ -1,9 +1,9 @@
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 320px) and (max-width: 375px) {
   .logo-header {
     width: 20%;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h2 {
     font-size: 1.5rem;
@@ -14,14 +14,19 @@
   .CTA {
     font-size: 1rem;
   }
-  .player-col {
-    width: 100%;
-  }
-  .important-btn {
-    padding: 0.5em;
+  .background {
+    background-size: inherit;
+    height: 85vh;
   }
   .char-container {
-    margin-top: 60%;
+    margin-top: 20%;
+  }
+  .important-btn {
+    margin: 0;
+    padding: 0.2em;
+  }
+  .num {
+    margin-left: 40%;
   }
   .container {
     width: 100%;
@@ -31,27 +36,12 @@
     width: 100%;
     margin-top: 10%;
   }
-  .col {
-    width: 90%;
-    margin-top: 35%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .col-img {
-    display: none;
-  }
   .btn-group button {
     margin-bottom: 5%;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     display: block;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
-    margin-top: 20%;
   }
   .img-hidden {
     display: block;
@@ -73,12 +63,30 @@
     width: 100%;
   }
   .info-col {
-    width: 100%;
-    margin-bottom: 10%;
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .headline2 {
+    font-size: 0.5em;
+  }
+  .player-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 0;
+  }
+  .playerTitle {
+    font-size: 0.5em;
+  }
+  .player-name {
+    font-size: 0.5em;
   }
   .hidden-content {
-    font-size: 0.5em;
-    margin-top: 10%;
+    margin-top: 5%;
   }
   footer {
     margin-top: 5%;
@@ -94,32 +102,14 @@
   .logo-header {
     width: 20%;
   }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  .CTA {
-    font-size: 1rem;
-  }
-  .player-col {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .info-col {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 10%;
-  }
   .important-btn {
     padding: 0.5em;
   }
+  .background {
+    background-size: inherit;
+  }
   .char-container {
-    margin-top: 60%;
+    margin-top: 35%;
   }
   .container {
     width: 100%;
@@ -128,21 +118,6 @@
   .horizontal_logo {
     width: 100%;
     margin-top: 10%;
-  }
-  .col {
-    width: 90%;
-    margin-top: 35%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .col-img {
-    display: none;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
-    margin-top: 20%;
   }
   .img-hidden {
     display: block;
@@ -167,9 +142,31 @@
   .card-info {
     width: 100%;
   }
-  .hidden-content {
+  .info-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .headline2 {
     font-size: 0.5em;
-    margin-top: 10%;
+  }
+  .player-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 0;
+  }
+  .playerTitle {
+    font-size: 0.5em;
+  }
+  .player-name {
+    font-size: 0.5em;
+  }
+  .hidden-content {
+    margin-top: 5%;
   }
   footer {
     margin-top: 5%;
@@ -182,18 +179,12 @@
   .logo-header {
     width: 15%;
   }
-  .player-col {
-    width: 90%;
-  }
-  .info-col {
-    width: 90%;
-    margin-bottom: 10%;
-  }
+
   .important-btn {
     padding: 0.5em;
   }
   .char-container {
-    margin-top: 50%;
+    margin-top: 8%;
   }
   .container {
     width: 100%;
@@ -224,29 +215,36 @@
     font-size: 0.8em;
     margin-top: 30%;
   }
-  .col {
-    width: 90%;
-    margin-top: 30%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .col-img {
-    display: none;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
-    margin-top: 10%;
-  }
   .img-hidden {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
   }
-  .hidden-content {
+  .info-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .headline2 {
     font-size: 0.5em;
+  }
+  .player-col {
+    width: 35%;
+    margin-left: 33%;
+    margin-bottom: 0;
+  }
+  .playerTitle {
+    font-size: 0.5em;
+  }
+  .player-name {
+    font-size: 0.5em;
+  }
+  .hidden-content {
     margin-top: 10%;
   }
   footer {
@@ -261,7 +259,7 @@
 }
 @media only screen and (min-width: 595px) and (max-width: 690px) {
   .logo-header {
-    width: 15%;
+    width: 10%;
   }
   .player-col {
     width: 30%;
@@ -275,7 +273,7 @@
     padding: 0.5em;
   }
   .char-container {
-    margin-top: 40%;
+    margin-top: 8%;
   }
   .container {
     width: 100%;
@@ -284,17 +282,6 @@
   .horizontal_logo {
     width: 90%;
     margin-top: 10%;
-  }
-  .col-img {
-    display: none;
-  }
-  .col {
-    margin-top: 30%;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
   }
   .img-hidden {
     display: block;
@@ -337,7 +324,7 @@
 }
 @media only screen and (min-width: 690px) and (max-width: 800px) {
   .logo-header {
-    width: 15%;
+    width: 10%;
   }
   .player-col {
     width: 30%;
@@ -347,11 +334,20 @@
     width: 40%;
     margin: auto;
   }
+  .headline2 {
+    font-size: 1em;
+  }
+  .playerTitle {
+    font-size: 1em;
+  }
+  .player-name {
+    font-size: 1em;
+  }
   .important-btn {
     padding: 0.5em;
   }
   .char-container {
-    margin-top: 35%;
+    margin-top: 8%;
   }
   .container {
     width: 100%;
@@ -360,17 +356,6 @@
   .horizontal_logo {
     width: 80%;
     margin-top: 5%;
-  }
-  .col-img {
-    display: none;
-  }
-  .col {
-    margin-top: 30%;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
   }
   .img-hidden {
     display: block;
@@ -410,19 +395,11 @@
     margin: auto;
   }
   .char-container {
-    margin-top: 25%;
+    margin-top: 5%;
   }
   .container {
     width: 100%;
     margin-left: 0;
-  }
-  .col-img {
-    display: none;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
   }
   .img-hidden {
     display: block;
@@ -462,9 +439,20 @@
     width: 40%;
     margin: auto;
   }
+  .sidebar {
+    margin-left: 1em;
+    margin-top: 10%;
+  }
+  .game {
+    font-size: 1.5rem;
+  }
+  .container-boardgame {
+    width: 650px;
+    max-width: 650px;
+    left: 30%;
+  }
   .char-container {
-    margin-top: 15%;
-    margin-left: 5%;
+    margin-top: 5%;
   }
   .container {
     width: 100%;
@@ -473,14 +461,6 @@
   .hidden-content {
     margin-top: 10%;
   }
-  .col-img {
-    display: none;
-  }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
-  }
   .img-hidden {
     display: block;
     margin-left: auto;
@@ -488,22 +468,44 @@
     width: 60%;
   }
 }
-@media screen and (min-width: 1320px) and (max-width: 1500) {
-  .col {
-    width: 100%;
+@media screen and (min-width: 1320px) and (max-width: 1500px) {
+  .sidebar {
+    width: 35%;
+    margin-left: 1em;
+    margin-top: 10%;
   }
-  .col-img {
-    display: none;
+  .game {
+    font-size: 1.5rem;
   }
-  .hidden-img {
-    display: block;
-    width: 90%;
-    margin: 5%;
+  .sidebar-box {
+    width: 20%;
   }
-  .img-hidden {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+  .playerId {
+    font-size: 1rem;
+  }
+  .playerTitle {
+    font-size: 1rem;
+  }
+  .player1Score {
+    font-size: 1rem;
+  }
+  .player2Score {
+    font-size: 1rem;
+  }
+  .circle {
+    margin: 0.1em;
+  }
+  .face {
+    width: 80px;
+    height: 80px;
+  }
+  .container-boardgame {
+    width: 800px;
+    max-width: 800px;
+    top: 8%;
+    left: 35%;
+  }
+  .board-icon {
+    margin-top: 30%;
   }
 }

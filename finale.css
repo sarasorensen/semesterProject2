@@ -21,20 +21,21 @@ canvas {
   text-transform: initial;
 }
 .col {
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
-  width: 60%;
-  height: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 15%;
-  margin-left: 20%;
 }
 
-.col-img {
-  float: right;
-  width: 50%;
-  margin-left: 10%;
-  margin: 0;
-}
-.hidden-img {
-  display: none;
+.col img {
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  height: auto;
+  opacity: 0.6;
 }

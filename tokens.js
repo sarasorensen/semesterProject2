@@ -33,7 +33,7 @@ function moveTokens() {
     if (tileNumber == undefined) {
       boardFieldArray[
         i
-      ].innerHTML = `<img class="board-icon" alt="picture of an icon" src="images/icons/${tileImg}"/>`;
+      ].innerHTML = `<img class="board-icon board-logo" alt="picture of an icon" src="images/icons/${tileImg}"/>`;
     }
 
     if (scoreP1 == number) {
