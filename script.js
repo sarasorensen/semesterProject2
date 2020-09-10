@@ -42,6 +42,7 @@ function chosen() {
 
           if (cards[i].dataset.id === player1) {
             console.log(this.dataset.id + " the character is now taken");
+            console.log("counter" + counter);
             cards[i].innerHTML = "";
 
             cards[i].classList.add(".newCard");
@@ -75,6 +76,22 @@ function chosen() {
           playersBox.style.display = "none";
           window.location.replace("boardgame.html");
         }, 1500);
+      }
+      if (cards[i].dataset.id === player2) {
+        console.log(this.dataset.id + " the character is now taken");
+        console.log("counter" + counter);
+        cards[i].innerHTML = "";
+
+        cards[i].classList.add(".newCard");
+
+        var newText = document.createElement("newText");
+        newText.classList.add("newText");
+        cards[
+          i
+        ].innerHTML = `<div class="newCard"> <h2 class="newText">This character is taken</h2> </div>`;
+        cards[i].appendChild(newText);
+
+        return;
       }
     };
   }
