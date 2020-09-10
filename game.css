@@ -104,6 +104,9 @@
   left: 40%;
   right: 0;
 }
+.container {
+  display: none;
+}
 .board-game {
   width: 100%;
   max-width: 100%;

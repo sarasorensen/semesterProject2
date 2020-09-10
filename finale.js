@@ -9,6 +9,10 @@ function clear() {
   window.location = "index.html";
   localStorage.clear();
 }
+function clearStorage() {
+  window.location.replace("index.html");
+  localStorage.clear();
+}
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 

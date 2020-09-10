@@ -15,8 +15,7 @@
     font-size: 1rem;
   }
   .background {
-    background-size: inherit;
-    height: 85vh;
+    height: 55vh;
   }
   .char-container {
     margin-top: 20%;
@@ -75,8 +74,8 @@
     font-size: 0.5em;
   }
   .player-col {
-    width: 20%;
-    margin-left: 40%;
+    width: 60%;
+    margin-left: 20%;
     margin-bottom: 0;
   }
   .playerTitle {
@@ -87,6 +86,22 @@
   }
   .hidden-content {
     margin-top: 5%;
+  }
+  .col {
+    margin-top: 50%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 1em;
+  }
+  .container-boardgame {
+    display: none;
   }
   footer {
     margin-top: 5%;
@@ -105,11 +120,8 @@
   .important-btn {
     padding: 0.5em;
   }
-  .background {
-    background-size: inherit;
-  }
   .char-container {
-    margin-top: 35%;
+    margin-top: 20%;
   }
   .container {
     width: 100%;
@@ -155,8 +167,8 @@
     font-size: 0.5em;
   }
   .player-col {
-    width: 20%;
-    margin-left: 40%;
+    width: 60%;
+    margin-left: 20%;
     margin-bottom: 0;
   }
   .playerTitle {
@@ -167,6 +179,22 @@
   }
   .hidden-content {
     margin-top: 5%;
+  }
+  .col {
+    margin-top: 40%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 1em;
+  }
+  .container-boardgame {
+    display: none;
   }
   footer {
     margin-top: 5%;
@@ -179,7 +207,6 @@
   .logo-header {
     width: 15%;
   }
-
   .important-btn {
     padding: 0.5em;
   }
@@ -234,8 +261,8 @@
     font-size: 0.5em;
   }
   .player-col {
-    width: 35%;
-    margin-left: 33%;
+    width: 60%;
+    margin-left: 20%;
     margin-bottom: 0;
   }
   .playerTitle {
@@ -247,6 +274,19 @@
   .hidden-content {
     margin-top: 10%;
   }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 1em;
+  }
+  .container-boardgame {
+    display: none;
+  }
   footer {
     margin-top: 5%;
   }
@@ -257,6 +297,7 @@
     font-size: 1em;
   }
 }
+
 @media only screen and (min-width: 595px) and (max-width: 690px) {
   .logo-header {
     width: 10%;
@@ -264,6 +305,9 @@
   .player-col {
     width: 30%;
     margin: auto;
+  }
+  .background {
+    height: 115vh;
   }
   .info-col {
     width: 40%;
@@ -307,6 +351,19 @@
   .card-info {
     width: 100%;
   }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+  .container-boardgame {
+    display: none;
+  }
   .hidden-content {
     font-size: 0.8em;
     margin-top: 35%;
@@ -349,7 +406,7 @@
   .char-container {
     margin-top: 8%;
   }
-  .container {
+  .cont-message {
     width: 100%;
     margin-left: 0;
   }
@@ -375,6 +432,19 @@
     font-size: 0.5em;
     margin-top: 10%;
   }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+  .container-boardgame {
+    display: none;
+  }
   footer {
     margin-top: 5%;
   }
@@ -394,8 +464,11 @@
     width: 40%;
     margin: auto;
   }
+  .background {
+    height: 55vh;
+  }
   .char-container {
-    margin-top: 5%;
+    margin-top: 10%;
   }
   .container {
     width: 100%;
@@ -420,6 +493,19 @@
   .hidden-content {
     margin-top: 15%;
   }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 25%;
+  }
+  .container-boardgame {
+    display: none;
+  }
   footer {
     margin-top: 5%;
   }
@@ -428,6 +514,11 @@
   }
   .copyright {
     font-size: 1em;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .background {
+    height: 110vh;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1320px) {
@@ -451,8 +542,11 @@
     max-width: 650px;
     left: 30%;
   }
+  .background {
+    height: 55vh;
+  }
   .char-container {
-    margin-top: 5%;
+    margin-top: 10%;
   }
   .container {
     width: 100%;

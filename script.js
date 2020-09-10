@@ -23,7 +23,7 @@ function chosen() {
       console.log(this.dataset.id + " + " + this.dataset.src);
       if (counter < 1) {
         counter++;
-        if (counter === 1) {
+        if (counter == 1) {
           localStorage.setItem("Player1", cards[i].dataset.id);
           localStorage.setItem("img1", cards[i].dataset.src);
 
@@ -53,11 +53,11 @@ function chosen() {
               i
             ].innerHTML = `<div class="newCard"> <h2 class="newText">This character is taken</h2> </div>`;
             cards[i].appendChild(newText);
-
+            counter++;
             return;
           }
         }
-      } else {
+      } else if (counter == 2) {
         localStorage.setItem("Player2", cards[i].dataset.id);
         localStorage.setItem("img2", cards[i].dataset.src);
 
@@ -71,11 +71,15 @@ function chosen() {
                                                                     <h2 class="player-name">Player 2</h2>
                                                                     <h3 class="playerTitle">${player2}</h3> `;
         playersBox.style.display = "block";
-
+        counter++;
         setTimeout(function () {
           playersBox.style.display = "none";
           window.location.replace("boardgame.html");
         }, 1500);
+      } else {
+        alert(
+          "you can only choose two characters, click new game to choose new characters."
+        );
       }
       if (cards[i].dataset.id === player2) {
         console.log(this.dataset.id + " the character is now taken");
