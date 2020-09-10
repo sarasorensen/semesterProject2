@@ -5,10 +5,10 @@
 
 .sidebar {
   display: inline-block;
-  margin-left: 5%;
+  margin-left: 1em;
   margin-bottom: 10%;
   margin-top: 10%;
-  width: 35%;
+  width: 25%;
   color: #000000;
   background-color: #f4f7f6;
   padding: 5px;
@@ -98,11 +98,12 @@
 }
 .container-boardgame {
   float: right;
-  width: 50%;
-  margin-top: -50%;
-  margin-right: 5%;
+  width: 70%;
+  margin-top: -45%;
+  margin-right: 2em;
 }
 .board-game {
+  width: 100%;
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -117,12 +118,89 @@
   transition: 0.3s ease-in-out 0s;
 }
 .game-card {
-  background-image: linear-gradient(to bottom right, #326972, #234b52);
   margin: 0.5em;
   width: 150px;
   height: 150px;
+  color: white;
   text-align: center;
   padding: 0;
+}
+.card-row {
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.card-row2 {
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+.card-row3 {
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: -44%;
+  margin-left: 1%;
+}
+.card-row4 {
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: -33%;
+  margin-left: 45%;
+}
+.card-column {
+  display: flex;
+  margin-left: 89%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-end !important;
+}
+.card-column2 {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  margin-top: -44%;
+  height: 50%;
+  margin-left: 1%;
+}
+.card-column3 {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -33%;
+  margin-left: 34%;
 }
 .card-img-chosen {
   cursor: default;
