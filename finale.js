@@ -9,11 +9,6 @@ function clear() {
   window.location = "index.html";
   localStorage.clear();
 }
-function redirect() {
-  window.location = "index.html";
-  localStorage.clear();
-}
-
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -21,8 +16,8 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
 window.addEventListener("resize", function () {
-  w = window.innerWidth;
-  h = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 });
 
 const startConfetti = document.querySelector("#confettiBtn");

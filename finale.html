@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Game of Banners is a free online board game, enjoy with friends and family today!"
+      content="Game of Banners winning page, congratulations if you won!"
     />
     <link rel="stylesheet" href="styles/stylesheet.css" />
     <link rel="stylesheet" href="styles/finale.css" />
@@ -24,12 +24,9 @@
   </head>
 
   <body>
-
     <canvas id="canvas"
-    >Your browser does not support canvas, please update it.</canvas
-  >
-
-
+      >Your browser does not support canvas, please update it.</canvas
+    >
 
     <div class="fin-container">
       <header>
@@ -46,42 +43,36 @@
           </ul>
         </nav>
       </header>
-   
 
-      <div class="col"> 
-         <img
-        class="col-img"
-        src="images/winner.jp2"
-        alt="company logo Game Of Banners"
-      />
+      <div class="col">
+        <img
+          class="col-img"
+          src="images/winner.jp2"
+          alt="company logo Game Of Banners"
+        />
         <article>
           <h1 class="finale-h1">The big winner reveal</h1>
           <h2 class="finale-h2" id="winner"></h2>
           <p>Celebrate with some fun snow confetti, or play again.</p>
 
           <div class="btn-group">
-          <button type="button" id="confettiBtn" class="red-btn">
-            Celebrate
-          </button>
+            <button type="button" id="confettiBtn" class="red-btn">
+              Celebrate
+            </button>
 
-          <button onclick ="redirect()"  href="index.html" class="blue-btn">Play Again</button>
-        </div>
-
+            <button onclick="clear()" class="blue-btn">Play Again</button>
+          </div>
         </article>
 
- 
-
-      <div class="hidden-img">
-        <img
-      class="img-hidden"
-        src="images/winner.jp2"
-        alt="company logo Game Of Banners"
-      />
+        <div class="hidden-img">
+          <img
+            class="img-hidden"
+            src="images/winner.jp2"
+            alt="company logo Game Of Banners"
+          />
+        </div>
       </div>
-      </div>
-
-
-
+    </div>
     <footer>
       <div class="footer-column">
         <a href="index.html">

@@ -31,7 +31,7 @@ function chosen() {
           var img1 = localStorage.getItem("img1");
 
           document.getElementById("characterP1").innerHTML += `
-                                                                      <img  class="card-img-chosen" alt="icon of chosen character" src="${img1} "/>
+                                                                      <img  class="card-img-chosen" alt="icon character Player 1" src="${img1} "/>
                                                                       <h2 class="player-name">Player 1</h2>
                                                                       <h3 class="playerTitle">${player1}</h3> `;
           playersBox.style.display = "block";
@@ -66,7 +66,7 @@ function chosen() {
         document.getElementById("headline2").textContent = "Get ready to play!";
 
         document.getElementById("characterP2").innerHTML += `
-                                                                    <img  class="card-img-chosen" alt="icon of chosen character" src="${img2} "/>
+                                                                    <img  class="card-img-chosen" alt="icon character Player 1" src="${img2} "/>
                                                                     <h2 class="player-name">Player 2</h2>
                                                                     <h3 class="playerTitle">${player2}</h3> `;
         playersBox.style.display = "block";

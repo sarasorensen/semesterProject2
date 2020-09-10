@@ -179,6 +179,7 @@ function doPlayer2() {
     checkP2();
   });
 }
+
 //Close window if user clicks outside it
 window.addEventListener("click", function (event) {
   if (event.target == trapBox) {
