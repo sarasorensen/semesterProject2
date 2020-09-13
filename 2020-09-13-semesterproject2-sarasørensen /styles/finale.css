@@ -1,0 +1,41 @@
+/*FINALE PAGE-------------------------------------------------------------------------------------------*/
+canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  left: 0px;
+  right: 0px;
+  top: 0;
+}
+.fin-container {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+.finale-h1 {
+  color: #234b52;
+}
+.finale-h2 {
+  font-family: "Playfair Display", serif;
+  text-transform: initial;
+}
+.col {
+  text-align: center;
+  font-size: 1.3em;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 15%;
+}
+
+.col img {
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  height: auto;
+  opacity: 0.6;
+}

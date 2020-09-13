@@ -1,0 +1,605 @@
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .logo-header {
+    width: 20%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .CTA {
+    font-size: 1rem;
+  }
+  .background {
+    height: 55vh;
+  }
+  .char-container {
+    margin-top: 20%;
+  }
+  .important-btn {
+    margin: 0;
+    padding: 0.2em;
+  }
+  .num {
+    margin-left: 40%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .horizontal_logo {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .btn-group button {
+    margin-bottom: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    margin-top: 15%;
+  }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 8%;
+  }
+  .card-info {
+    width: 100%;
+  }
+  .info-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .headline2 {
+    font-size: 0.5em;
+  }
+  .player-col {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 0;
+  }
+  .playerTitle {
+    font-size: 0.5em;
+  }
+  .player-name {
+    font-size: 0.5em;
+  }
+  .hidden-content {
+    margin-top: 5%;
+  }
+  .col {
+    margin-top: 50%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 1em;
+  }
+  .container-boardgame {
+    display: none;
+  }
+  footer {
+    margin-top: 5%;
+  }
+  .copyright {
+    font-size: 0.8rem;
+  }
+  .logo-footer {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 480px) {
+  .logo-header {
+    width: 20%;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
+  .char-container {
+    margin-top: 20%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .horizontal_logo {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    margin-top: 15%;
+  }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 10%;
+  }
+  .num {
+    margin-left: 45%;
+    width: 10%;
+  }
+  .card-info {
+    width: 100%;
+  }
+  .info-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .headline2 {
+    font-size: 0.5em;
+  }
+  .player-col {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 0;
+  }
+  .playerTitle {
+    font-size: 0.5em;
+  }
+  .player-name {
+    font-size: 0.5em;
+  }
+  .hidden-content {
+    margin-top: 5%;
+  }
+  .col {
+    margin-top: 40%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 1em;
+  }
+  .container-boardgame {
+    display: none;
+  }
+  footer {
+    margin-top: 5%;
+  }
+  .logo-footer {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 595px) {
+  .logo-header {
+    width: 15%;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
+  .char-container {
+    margin-top: 8%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .horizontal_logo {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 100%;
+    margin-top: 15%;
+  }
+  .card-info {
+    width: 100%;
+  }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 10%;
+  }
+  .num {
+    margin-left: 45%;
+    width: 10%;
+  }
+  .hidden-content {
+    font-size: 0.8em;
+    margin-top: 30%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .info-col {
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+  }
+  .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .headline2 {
+    font-size: 0.5em;
+  }
+  .player-col {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 0;
+  }
+  .playerTitle {
+    font-size: 0.5em;
+  }
+  .player-name {
+    font-size: 0.5em;
+  }
+  .hidden-content {
+    margin-top: 10%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 1em;
+  }
+  .container-boardgame {
+    display: none;
+  }
+  footer {
+    margin-top: 5%;
+  }
+  .logo-footer {
+    width: 50%;
+  }
+  .copyright {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 595px) and (max-width: 690px) {
+  .logo-header {
+    width: 10%;
+  }
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .background {
+    height: 115vh;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
+  .char-container {
+    margin-top: 8%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .horizontal_logo {
+    width: 90%;
+    margin-top: 10%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 100%;
+    margin-top: 15%;
+  }
+  .guideBox {
+    margin-bottom: 10%;
+  }
+  .char-heading {
+    margin-bottom: 10%;
+  }
+  .num {
+    margin-left: 45%;
+    width: 10%;
+  }
+  .card-info {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+  .container-boardgame {
+    display: none;
+  }
+  .hidden-content {
+    font-size: 0.8em;
+    margin-top: 35%;
+  }
+  .hidden-content {
+    font-size: 0.5em;
+    margin-top: 10%;
+  }
+  footer {
+    margin-top: 5%;
+  }
+  .logo-footer {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 690px) and (max-width: 800px) {
+  .logo-header {
+    width: 10%;
+  }
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
+  .headline2 {
+    font-size: 1em;
+  }
+  .playerTitle {
+    font-size: 1em;
+  }
+  .player-name {
+    font-size: 1em;
+  }
+  .important-btn {
+    padding: 0.5em;
+  }
+  .char-container {
+    margin-top: 8%;
+  }
+  .cont-message {
+    width: 100%;
+    margin-left: 0;
+  }
+  .horizontal_logo {
+    width: 80%;
+    margin-top: 5%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 45%;
+    margin-top: 5%;
+  }
+  .card-info {
+    width: 45%;
+  }
+  .hidden-content {
+    font-size: 0.5em;
+    margin-top: 10%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+  .container-boardgame {
+    display: none;
+  }
+  footer {
+    margin-top: 5%;
+  }
+  .logo-footer {
+    width: 50%;
+  }
+  .copyright {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
+  .background {
+    height: 55vh;
+  }
+  .char-container {
+    margin-top: 10%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 10%;
+  }
+  .card {
+    width: 40%;
+  }
+  .card-info {
+    width: 40%;
+  }
+  .player-name {
+    letter-spacing: 0;
+  }
+  .hidden-content {
+    margin-top: 15%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .cont-message {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 25%;
+  }
+  .container-boardgame {
+    display: none;
+  }
+  footer {
+    margin-top: 5%;
+  }
+  .logo-footer {
+    width: 40%;
+  }
+  .copyright {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .background {
+    height: 110vh;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1320px) {
+  .player-col {
+    width: 30%;
+    margin: auto;
+  }
+  .info-col {
+    width: 40%;
+    margin: auto;
+  }
+  .sidebar {
+    margin-left: 1em;
+    margin-top: 10%;
+  }
+  .game {
+    font-size: 1.5rem;
+  }
+  .container-boardgame {
+    width: 650px;
+    max-width: 650px;
+    left: 30%;
+  }
+  .background {
+    height: 55vh;
+  }
+  .char-container {
+    margin-top: 10%;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .hidden-content {
+    margin-top: 10%;
+  }
+  .img-hidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1320px) and (max-width: 1500px) {
+  .sidebar {
+    width: 35%;
+    margin-left: 1em;
+    margin-top: 10%;
+  }
+  .game {
+    font-size: 1.5rem;
+  }
+  .sidebar-box {
+    width: 20%;
+  }
+  .playerId {
+    font-size: 1rem;
+  }
+  .playerTitle {
+    font-size: 1rem;
+  }
+  .player1Score {
+    font-size: 1rem;
+  }
+  .player2Score {
+    font-size: 1rem;
+  }
+  .circle {
+    margin: 0.1em;
+  }
+  .face {
+    width: 80px;
+    height: 80px;
+  }
+  .container-boardgame {
+    width: 800px;
+    max-width: 800px;
+    top: 8%;
+    left: 35%;
+  }
+  .board-icon {
+    margin-top: 30%;
+  }
+}

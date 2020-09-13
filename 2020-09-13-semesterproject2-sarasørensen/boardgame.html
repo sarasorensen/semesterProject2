@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The online board game of Game of Banners. Good luck!"
+    />
+
+    <link rel="stylesheet" href="styles/dice.css" />
+    <link rel="stylesheet" href="styles/game.css" />
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+    <link rel="stylesheet" href="styles/media.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="images/rel-icon.png" />
+    <title>Game Of Banners - The Game</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar" id="navbar">
+        <a class="logo-header-a" href="index.html"
+          ><img
+            class="logo-header"
+            src="images/banner.png"
+            alt="company logo Game Of Banners"
+        /></a>
+
+        <ul class="menubar">
+          <li><a href="javascript:warning();">New Game</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="game-wrapper">
+      <div class="sidebar">
+        <div class="info-box">
+          <h1 class="game">Instructions</h1>
+
+          <div class="sidebar-box" id="player1">
+            <h2 class="playerId">Player 1</h2>
+            <h3 class="playerTitle one">player name</h3>
+            <img
+              class="card-img-chosen one"
+              alt="picture of player 1 character"
+              src="images/errorImage.png"
+            />
+            <p class="player1Score">Score: <span>0</span></p>
+          </div>
+
+          <div class="sidebar-box" id="player2">
+            <h2 class="playerId">Player 2</h2>
+            <h3 class="playerTitle two">player name</h3>
+            <img
+              class="card-img-chosen two"
+              alt="picture of player 2 character"
+              src="images/errorImage.png"
+            />
+            <p class="player2Score">Score: <span>0</span></p>
+          </div>
+
+          <div class="dice-box">
+            <h3 id="currentPlayer1" class="currentPlayer1">
+              Player 1 your turn
+            </h3>
+            <h3 id="currentPlayer2" class="currentPlayer2">
+              Player 2 your turn
+            </h3>
+          </div>
+
+          <div class="dices" id="dices">
+            <div class="dice-0 face">
+              <span class="circle"></span>
+            </div>
+
+            <div class="dice-1 face">
+              <span class="circle"></span>
+            </div>
+            <div class="dice-2 face">
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </div>
+            <div class="dice-3 face">
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </div>
+            <div class="dice-4 face">
+              <div class="column">
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+              <div class="column">
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+            </div>
+            <div class="dice-5 face">
+              <div class="column">
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+              <div class="column">
+                <span class="circle"></span>
+              </div>
+              <div class="column">
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+            </div>
+            <div class="dice-6 face">
+              <div class="column">
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+              <div class="column">
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="placeholder" id="placeholder"></div>
+
+        <button class="blue-btn__game" id="button">Roll Dice</button>
+      </div>
+
+      <div id="container-boardgame" class="container-boardgame">
+        <div class="board-game">
+          <div class="card-row">
+            <div class="game-card" data-number="1" data-display="1">
+              <p class="number">1</p>
+            </div>
+
+            <div class="game-card" data-number="2" data-display="2">
+              <p class="number">2</p>
+            </div>
+
+            <div class="game-card" data-number="3" data-display="3">
+              <p class="number">3</p>
+            </div>
+
+            <div class="game-card" data-number="4" data-display="4">
+              <p class="number">4</p>
+            </div>
+
+            <div class="game-card" data-number="5" data-display="5">
+              <p class="number">5</p>
+            </div>
+
+            <div class="game-card" data-number="6" data-display="6">
+              <p class="number">6</p>
+            </div>
+
+            <div class="game-card" data-number="7" data-img="white-stark.png">
+              <img
+                class="board-icon"
+                alt="icon of stark symbol"
+                src="images/icons/white-stark.png"
+              />
+            </div>
+
+            <div class="game-card" data-number="8" data-display="8">
+              <p class="number">8</p>
+            </div>
+
+            <div class="game-card" data-number="9" data-display="9">
+              <p class="number">9</p>
+            </div>
+          </div>
+          <div class="card-column">
+            <div class="game-card" data-number="10" data-display="10">
+              <p class="number">10</p>
+            </div>
+          </div>
+
+          <div class="card-row2">
+            <div class="game-card" data-number="11" data-display="11">
+              <p class="number">11</p>
+            </div>
+
+            <div class="game-card" data-number="12" data-img="white-ice.png">
+              <img
+                class="board-icon"
+                alt="icon of ice symbol"
+                src="images/icons/white-ice.png"
+              />
+            </div>
+
+            <div class="game-card" data-number="13" data-display="13">
+              <p class="number">13</p>
+            </div>
+
+            <div class="game-card" data-number="14" data-display="14">
+              <p class="number">14</p>
+            </div>
+
+            <div class="game-card" data-number="15" data-display="15">
+              <p class="number">15</p>
+            </div>
+
+            <div class="game-card" data-number="16" data-display="16">
+              <p class="number">16</p>
+            </div>
+
+            <div class="game-card" data-number="17" data-display="17">
+              <p class="number">17</p>
+            </div>
+
+            <div
+              class="game-card"
+              data-number="18"
+              data-img="white-lannister.png"
+            >
+              <img
+                class="board-icon"
+                alt="icon of lannister symbol"
+                src="images/icons/white-lannister.png"
+              />
+            </div>
+
+            <div class="game-card" data-number="19" data-display="19">
+              <p class="number">19</p>
+            </div>
+          </div>
+          <div class="card-column2">
+            <div class="game-card" data-number="20" data-display="20">
+              <p class="number">20</p>
+            </div>
+
+            <div class="game-card" data-number="21" data-img="white-fire.png">
+              <img
+                class="board-icon"
+                alt="icon of fire symbol"
+                src="images/icons/white-fire.png"
+              />
+            </div>
+          </div>
+
+          <div class="card-row3">
+            <div class="game-card" data-number="22" data-display="22">
+              <p class="number">22</p>
+            </div>
+
+            <div class="game-card" data-number="23" data-display="23">
+              <p class="number">23</p>
+            </div>
+
+            <div class="game-card" data-number="24" data-display="24">
+              <p class="number">24</p>
+            </div>
+
+            <div class="game-card" data-number="25" data-display="25">
+              <p class="number">25</p>
+            </div>
+
+            <div class="game-card" data-number="26" data-display="26">
+              <p class="number">26</p>
+            </div>
+
+            <div class="game-card" data-number="27" data-display="27">
+              <p class="number">27</p>
+            </div>
+
+            <div class="game-card" data-number="28" data-img="white-dragon.png">
+              <img
+                class="board-icon"
+                alt="icon of dragon symbol"
+                src="images/icons/white-dragon.png"
+              />
+            </div>
+
+            <div class="game-card" data-number="29" data-display="29">
+              <p class="number">29</p>
+            </div>
+
+            <div
+              class="game-card"
+              data-number="30"
+              data-img="white-smallLogo.png"
+            >
+              <img
+                class="board-logo"
+                alt="logo game of banners"
+                src="images/icons/white-smallLogo.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameOverBox" class="gameOverBox">
+      <div class="hidden">
+        <h3>Game over</h3>
+        <p>Revealing winner...</p>
+        <div class="spin-col">
+          <p class="loader"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="trapBox" class="trapBox">
+      <div class="hidden"></div>
+    </div>
+
+    <div class="cont-message">
+      <p>Please go on a bigger screen to play</p>
+    </div>
+
+    <footer>
+      <div class="footer-column">
+        <a href="index.html">
+          <img
+            class="logo-footer"
+            src="images/white-horizontal-logo.png"
+            alt="Game Of Banners Logo"
+        /></a>
+      </div>
+
+      <div class="footer-column">
+        <p class="copyright">
+          © 2020 Game of Banners. Web design by Sara Sørensen.
+        </p>
+      </div>
+    </footer>
+
+    <script src="scripts/utils/warning.js"></script>
+    <script src="scripts/utils/dice.js"></script>
+    <script src="scripts/utils/traps.js"></script>
+    <script src="scripts/tokens.js"></script>
+    <script src="scripts/utils/winner.js"></script>
+    <script src="scripts/boardgame.js"></script>
+  </body>
+</html>

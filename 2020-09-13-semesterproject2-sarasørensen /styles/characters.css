@@ -1,0 +1,198 @@
+.wrapper {
+  margin-top: 2.5em;
+  width: 100%;
+}
+.CTA {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1em;
+  color: #ffffff;
+}
+.container {
+  z-index: 1;
+  width: 50%;
+  margin-left: 25%;
+  color: #ffffff;
+  background-color: transparent;
+  margin-bottom: 1.5em;
+}
+.char-heading {
+  width: 100%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.guideBox {
+  color: #234b52;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.card-info {
+  position: relative;
+  width: 30%;
+  margin-bottom: 10%;
+  background-color: #f4f7f6;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.num {
+  background-color: #234b52;
+  color: #f4f7f6;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  margin-top: -8%;
+  margin-left: 45%;
+}
+.char-container {
+  text-align: center;
+  width: 90%;
+  margin: 5%;
+  margin-top: 8%;
+}
+.char-row {
+  width: 90%;
+  margin: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.char-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.char-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  position: relative;
+  width: 30%;
+  margin-bottom: 10%;
+  background-color: #f4f7f6;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+.card-img {
+  width: 50%;
+  margin-top: -30%;
+  background-color: #f4f7f6;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.card-img-chosen {
+  cursor: default;
+  border-radius: 50%;
+  width: 60%;
+  margin-top: 5%;
+  -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.card-box {
+  width: 90%;
+  margin: 5%;
+}
+.title-box {
+  height: 10%;
+  width: 100%;
+}
+.card:hover .title-box {
+  opacity: 1;
+}
+.title {
+  margin-bottom: 0;
+}
+.alias {
+  margin-top: 0;
+}
+.description {
+  color: #4e4c4c;
+  text-align: center;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.players-box {
+  cursor: default;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a1;
+  display: none;
+}
+.hidden-content {
+  background-color: #f4f7f6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 70%;
+  padding: 1.5em 2em 1.5em 2em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+.player-col {
+  float: left;
+  width: 30%;
+  margin: auto;
+}
+.info-col {
+  float: left;
+  width: 40%;
+  margin: auto;
+}
+.playerTitle {
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+.headline2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  color: #234b52;
+  margin-top: 30%;
+}
+.player-img {
+  width: 100%;
+}
+.player-name {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  text-align: center;
+}
+.newText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: #234b52;
+  text-transform: uppercase;
+  cursor: default;
+}
