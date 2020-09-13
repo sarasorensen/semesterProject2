@@ -1,0 +1,312 @@
+/*GAME BOARD PAGE-------------------------------------------------------------------------------------------*/
+.game-wrapper {
+  background-color: #d8d7d7;
+  padding-bottom: 10%;
+}
+
+.sidebar {
+  display: inline-block;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  width: 30%;
+  color: #000000;
+  background-color: #f4f7f6;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.info-box {
+  width: 100%;
+  color: #000000;
+}
+.game {
+  margin: 1em;
+  font-size: 2.5rem;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+.blue-btn__game {
+  background-color: #234b52;
+  color: #ffffff;
+  border: 1px solid #234b52;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+.blue-btn__game:hover {
+  background-color: transparent;
+  color: #234b52;
+}
+.sidebar-box {
+  display: inline-block;
+  width: 35%;
+  margin: 2em;
+  margin-top: 1em;
+}
+.player-game__img {
+  float: left;
+  width: 35%;
+}
+.playerId {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.player1Score {
+  font-weight: bolder;
+}
+.player2Score {
+  font-weight: bolder;
+}
+.currentPlayer1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  display: none;
+  font-weight: bolder;
+  color: #234b52;
+}
+.currentPlayer2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  display: none;
+  font-weight: bolder;
+  color: #a94442;
+}
+.placeholder {
+  border: 1px solid transparent;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+.placeholderText {
+  margin: 0;
+}
+.container-boardgame {
+  float: right;
+  width: 900px;
+  max-width: 900px;
+  margin-left: 3em;
+  margin-right: 3em;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  right: 0;
+}
+.container {
+  display: none;
+}
+.board-game {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  transition: 0.3s ease-in-out 0s;
+}
+.game-card {
+  margin: 0.5em;
+  width: 100px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+.card-row {
+  width: 100%;
+  display: flex;
+  flex-grow: 0;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.card-row2 {
+  width: 100%;
+  display: flex;
+  flex-grow: 0;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+.card-row3 {
+  width: 100%;
+  display: flex;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.card-column {
+  width: 100%;
+  display: flex;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.card-column .game-card {
+  margin: 0.5em;
+  width: 80px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+.card-column2 {
+  display: flex;
+  flex-grow: 0;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-column2 .game-card {
+  margin: 0.5em;
+  width: 80px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+.card-img-chosen {
+  cursor: default;
+  border-radius: 50%;
+  width: 60%;
+  margin-top: 5%;
+  -moz-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.trapBox {
+  display: none;
+  text-transform: initial;
+  cursor: default;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a1;
+}
+.board-img {
+  width: 70%;
+  border-radius: 50%;
+  margin-top: -70%;
+  margin-bottom: 50%;
+  margin-right: 5%;
+  transition: 0.3s ease-in-out;
+}
+.board-icon {
+  width: 100%;
+  margin-top: 15%;
+  margin-right: 5%;
+  transition: 0.3s ease-in-out;
+}
+.board-logo {
+  width: 80%;
+  margin-top: 25%;
+  transition: 0.3s ease-in-out;
+}
+.number {
+  text-align: center;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 40%;
+}
+.icon {
+  width: 30%;
+}
+.icon-char {
+  width: 20%;
+  border-radius: 50%;
+}
+.gameOverBox {
+  display: none;
+  cursor: default;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a1;
+}
+.hidden {
+  background-color: #f4f7f6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+  color: #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  width: 50%;
+  padding: 0.5em 2em 1em 2em;
+  text-align: center;
+}
+.spin-col {
+  width: 100%;
+}

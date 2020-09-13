@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Game of Banners winning page, congratulations if you won!"
+    />
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+    <link rel="stylesheet" href="styles/finale.css" />
+    <link rel="stylesheet" href="styles/media.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="images/rel-icon.png" />
+    <title>Game Of Banners - The Finale Page</title>
+  </head>
+
+  <body>
+    <canvas id="canvas"
+      >Your browser does not support canvas, please update it.</canvas
+    >
+
+    <div class="fin-container">
+      <header>
+        <nav class="navbar" id="navbar">
+          <a class="logo-header-a" href="index.html"
+            ><img
+              class="logo-header"
+              src="images/banner.png"
+              alt="company logo Game Of Banners"
+          /></a>
+
+          <ul class="menubar">
+            <li><a href="javascript:clear();">New Game</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="col">
+        <article>
+          <h1 class="finale-h1">The big winner reveal</h1>
+          <h2 class="finale-h2" id="winner">Winner Name</h2>
+          <p>Celebrate with some fun snow confetti, or play again.</p>
+
+          <div class="btn-group">
+            <button type="button" id="confettiBtn" class="red-btn">
+              Celebrate
+            </button>
+
+            <button onclick="clearStorage()" class="blue-btn">
+              Play Again
+            </button>
+
+            <img
+              src="images/winner.png"
+              alt="picture of a guy holding trophy"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-column">
+        <a href="index.html">
+          <img
+            class="logo-footer"
+            src="images/white-horizontal-logo.png"
+            alt="Game Of Banners Logo"
+        /></a>
+      </div>
+
+      <div class="footer-column">
+        <p class="copyright">
+          © 2020 Game of Banners. Web design by Sara Sørensen.
+        </p>
+      </div>
+    </footer>
+    <script src="scripts/finale.js"></script>
+  </body>
+</html>
